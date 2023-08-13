@@ -10,7 +10,7 @@ const heroRoutes = require('./routes/heroRoutes')
 const sessionRoutes = require('./routes/sessionRoutes')
 const partyRoutes = require('./routes/partyRoutes')
 const monsterRoutes = require("./routes/monsterRoutes")
-// const encounterRoutes = require("./routes/encounterRoutes")
+const encounterRoutes = require("./routes/encounterRoutes")
 
 const seed = require('./seeds/seeds')
 
@@ -25,7 +25,7 @@ app.use('/api/heroes', heroRoutes)
 app.use('/api/session', sessionRoutes)
 app.use('/api/party', partyRoutes)
 app.use('/api/monster', monsterRoutes)
-// app.use('/api/encounters', encounterRouters)
+app.use('/api/encounters', encounterRoutes)
 
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to the nexus." });

@@ -126,6 +126,41 @@ const updateCharacterid = async (req, res) => {
       });
   }
 };
+const updateEncounterid = async (req, res) => {
+  //updates the user matching the ID from the param using JSON data POSTed in request body
+  const user = await Models.User.findAll({
+    where: {
+      id: req.params.id,
+    },
+    raw: true,
+  })
+    .then((data) => {
+      // If a user is found the length will be > 1, else 0
+      //return is setting user=data
+      return data;
+    })
+    .catch((err) => {
+      console.log("Error:", err);
+      throw err;
+    });
+  if (user.length > 0) {
+    const newids = user[0].encounter_ids.ids;
+    // console.log (user[0].encounter_ids)
+    newids.push(req.body.character_id);
+    //sudo...look where id matches req.params.id
+    Models.User.update(
+      { encounter_ids: { ids: newids } },
+      { where: { id: req.params.id } }
+    )
+      .then(function (data) {
+        res.send({ result: 200, data: data });
+      })
+      .catch((err) => {
+        console.log("Error: ", err);
+        throw err;
+      });
+  }
+};
 
 const deleteUser = (req, res) => {
   //deletes the user matching the ID from the param
@@ -148,4 +183,5 @@ module.exports = {
   deleteUser,
   getUsersByIdTestPassword,
   updateCharacterid,
+  updateEncounterid
 };

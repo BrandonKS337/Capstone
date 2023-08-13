@@ -31,10 +31,15 @@ router.put("/:id", (req, res) => {
 router.delete("/:id", (req, res) => {
   Controllers.user.deleteUser(req, res);
 });
-//http://localhost:8000/api/users/:<id>/character
+//http://localhost:8000/api/users/character/:<id>
 router.put("/character/:id", (req, res) => {
   Controllers.user.updateCharacterid(req, res);
-});
+}); //new route created to update the character id
+
+//http://localhost:8000/api/users/encounters/:<id>
+router.put("/encounter/:id", (req, res) => {
+  Controllers.user.updateEncounterid(req, res);
+}); //new route created to update the character id
 
 //used as a test route during class session not needed for functionality. Just keeping as a reference
 // router.post("/testPassword/:id", (req, res) => {
