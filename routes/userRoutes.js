@@ -36,7 +36,7 @@ router.put("/character/:id", (req, res) => {
   Controllers.user.updateCharacterid(req, res);
 }); //new route created to update the character id
 
-//http://localhost:8000/api/users/encounters/:<id>
+//http://localhost:8000/api/users/encounter/:<id>
 router.put("/encounter/:id", (req, res) => {
   Controllers.user.updateEncounterid(req, res);
 }); //new route created to update the character id

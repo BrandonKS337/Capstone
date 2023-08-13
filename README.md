@@ -126,9 +126,23 @@ https://stackoverflow.com/questions/29461908/how-to-do-bulk-insert-using-sequeli
 
 PUT -character_id referenced under users table
 http://localhost:8000/api/users/character/<character_id being changed>
+// test
+1. GET and either http://localhost:8000/api/users/character
+OR http://localhost:8000/api/users/character/<character_id being changed> either will show data you would need to just scroll to it if you grab all.
 
-http://localhost:8000/api/users/character/<encounters_id being changed>
 
+
+http://localhost:8000/api/users/encounter/<encounters_id being changed>
+POST - http://localhost:8000/api/encounters/create creates encounters
+{
+    
+      "encounter_name": "Terry Vs the Goblins",
+      "dm_id": 1,
+      "encounter_description": "four brave adventurers all fight to open a bottle. alas failed",
+      "updatedAt": "2023-08-13T03:18:10.861Z",
+      "createdAt": "2023-08-13T03:18:10.861Z"
+    
+}
 ///// use a GET-http://localhost:8000/api/users/ to verify changes
 
 
