@@ -4,7 +4,7 @@ let dbConnect = require("../dbConnect");
 // const Session = require("./session");
 // const Encounter = require("./encounter");
 // const Party = require("./party");
-const Hero = require("./hero")
+// const Hero = require("./hero")
 
 const sequelizeInstance = dbConnect.Sequelize;
 
@@ -97,11 +97,13 @@ User.init(
 // User.hasMany(Hero, { heroes_id: 'heroes_ids' });
 // User.hasMany(Encounter, { foreignKey: 'encounter_ids' });
 
-User.hasMany(Hero, { foreignKey: 'user_id' });
 // User.hasMany(Encounter, { foreignKey: 'dm_id' });   //this bugs out the save.....find out why. prob something with dm_id inside encounter table not existing....aimed at wrong table??? may need to re-aim it at party
 // another thought here is the user can gain dm status so shouldnt the party table assign a specific user as the dm??
 
 // User.hasMany(Party, { foreignKey: 'dm_id' });
 // User.hasMany(Party, { foreignKey: 'player_ids' });
+
+// User.hasMany(Hero, { foreignKey: 'user_id' });
+
 
 module.exports = User;

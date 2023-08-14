@@ -1,11 +1,11 @@
 const { DataTypes, Model } = require("sequelize");
 const dbConnect = require("../dbConnect");
 const sequelizeInstance = dbConnect.Sequelize;
-const Race = require("./race")
-const Class = require("./class")
-const Weapons = require("./weapon")
-const Equipment = require("./equipment")
-const Spell = require("./spell")
+// const Race = require("./race")
+// const Class = require("./class")
+// const Weapons = require("./weapon")
+// const Equipment = require("./equipment")
+// const Spell = require("./spell")
 
 class Hero extends Model {}
 
@@ -125,11 +125,11 @@ Hero.init(
 //   console.log("Hero table created and example data inserted");
 // });
 
-Hero.hasOne(Race, { foreignKey: 'race_id' });
-Hero.hasOne(Class, { foreignKey: 'class_id' });
-Hero.hasMany(Weapons, {foreignKey: 'weapons_id'})
-Hero.hasMany(Equipment, { foreignKey: 'equipment_ids' });
-Hero.hasMany(Spell, { foreignKey: 'spells_ids' });
+// Hero.hasOne(Race, { foreignKey: 'race_id' });
+// Hero.hasOne(Class, { foreignKey: 'class_id' });
+// Hero.hasMany(Weapons, {foreignKey: 'weapons_id'})
+// Hero.hasMany(Equipment, { foreignKey: 'equipment_ids' });
+// Hero.hasMany(Spell, { foreignKey: 'spells_ids' });
 
 module.exports = Hero;
 

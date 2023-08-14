@@ -1,11 +1,11 @@
 const { DataTypes, Model } = require("sequelize");
 const dbConnect = require("../dbConnect");
 const sequelizeInstance = dbConnect.Sequelize;
-const Race = require("./race")
-const Class = require("./class")
-const Weapon = require("./weapon")
-const Equipment = require("./equipment")
-const Spell = require("./spell")
+// const Race = require("./race")
+// const Class = require("./class")
+// const Weapon = require("./weapon")
+// const Equipment = require("./equipment")
+// const Spell = require("./spell")
 
 class Monster extends Model {}
 
@@ -68,10 +68,10 @@ Monster.init(
   }
 );
 
-Monster.hasOne(Race, { foreignKey: 'race_id' });
-Monster.hasOne(Class, { foreignKey: 'type_id' });
-Monster.hasMany(Weapon, { foreignKey: 'weapon_ids' });
-Monster.hasMany(Equipment, { foreignKey: 'equipment_ids' });
-Monster.hasMany(Spell, { foreignKey: 'spells_ids' });
+// Monster.hasOne(Race, { foreignKey: 'race_id' });
+// Monster.hasOne(Class, { foreignKey: 'type_id' });
+// Monster.hasMany(Weapon, { foreignKey: 'weapon_ids' });
+// Monster.hasMany(Equipment, { foreignKey: 'equipment_ids' });
+// Monster.hasMany(Spell, { foreignKey: 'spells_ids' });
 
 module.exports = Monster;

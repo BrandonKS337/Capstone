@@ -1,9 +1,9 @@
 const { DataTypes, Model } = require("sequelize");
 const dbConnect = require("../dbConnect");
 const sequelizeInstance = dbConnect.Sequelize;
-const User = require("./user")
-const Hero = require("./hero")
-const Session = require("./session")
+// const User = require("./user")
+// const Hero = require("./hero")
+// const Session = require("./session")
 
 class Party extends Model {}
 
@@ -44,9 +44,9 @@ Party.init(
 
 // Party.belongsTo(Party, { foreignKey: 'dm_id' });
 
-Party.hasMany(User, { foreignKey: 'player_ids' });
-Party.hasMany(Hero, { foreignKey: 'hero_ids' });
-Party.hasMany(Session, { foreignKey: 'session_ids' });
+// Party.hasMany(User, { foreignKey: 'player_ids' });
+// Party.hasMany(Hero, { foreignKey: 'hero_ids' });
+// Party.hasMany(Session, { foreignKey: 'session_ids' });
 
 //user and session are both causing server to bug out
 

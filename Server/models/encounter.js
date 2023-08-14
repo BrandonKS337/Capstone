@@ -3,10 +3,10 @@ const dbConnect = require("../dbConnect");
 const sequelizeInstance = dbConnect.Sequelize;
 
 
-const User = require("./user")
-const Party = require("./party")
-const Hero = require("./hero")
-const Monster = require("./monster")
+// const User = require("./user")
+// const Party = require("./party")
+// const Hero = require("./hero")
+// const Monster = require("./monster")
 
 class Encounter extends Model {}
 
@@ -71,9 +71,9 @@ Encounter.init(
   }
 );
 
-Encounter.hasOne(User, { foreignKey: 'dm_id' });
-Encounter.hasMany(Party, { foreignKey: 'party_members' });
-Encounter.hasMany(Hero, { foreignKey: 'heroes_ids' });
-Encounter.hasMany(Monster, { foreignKey: 'monster_ids' });
+// Encounter.hasOne(User, { foreignKey: 'dm_id' });
+// Encounter.hasMany(Party, { foreignKey: 'party_members' });
+// Encounter.hasMany(Hero, { foreignKey: 'heroes_ids' });
+// Encounter.hasMany(Monster, { foreignKey: 'monster_ids' });
 
 module.exports = Encounter;
