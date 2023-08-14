@@ -149,7 +149,7 @@ POST - http://localhost:8000/api/encounters/create creates encounters
 
 
 
-
+*** Running Into a problem where the models are not creating properly thanks to foreign key inclusion. Can't reference a tbale that doesn't exist basically ***
 
 
 ///todos: look into trillo for todo list

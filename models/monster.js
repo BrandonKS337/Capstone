@@ -1,36 +1,41 @@
 const { DataTypes, Model } = require("sequelize");
 const dbConnect = require("../dbConnect");
 const sequelizeInstance = dbConnect.Sequelize;
+const Race = require("./race")
+const Class = require("./class")
+const Weapon = require("./weapon")
+const Equipment = require("./equipment")
+const Spell = require("./spell")
+
 class Monster extends Model {}
+
 
 // Sequelize will create this table if it doesn't exist on startup
 Monster.init(
   {
-    id: {
+    monster_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
     },
-    first_name: {
+    monster_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    last_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    difficulty_level: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     },
-    race: {
-      type: DataTypes.TEXT, // Use TEXT data type for potentially large content
-      allowNull: false,
-      unique: false,
+    xp_value: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    race_id: {
+      type: DataTypes.INTEGER, 
+      allowNull: true,
     },
     type: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      unique: false,
-    },
-    xp: {
       type: DataTypes.INTEGER,
       allowNull: true,
     },
@@ -62,5 +67,11 @@ Monster.init(
     underscored: true, // Use snake_case for column names
   }
 );
+
+Monster.hasOne(Race, { foreignKey: 'race_id' });
+Monster.hasOne(Class, { foreignKey: 'type_id' });
+Monster.hasMany(Weapon, { foreignKey: 'weapon_ids' });
+Monster.hasMany(Equipment, { foreignKey: 'equipment_ids' });
+Monster.hasMany(Spell, { foreignKey: 'spells_ids' });
 
 module.exports = Monster;

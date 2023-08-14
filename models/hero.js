@@ -1,53 +1,62 @@
 const { DataTypes, Model } = require("sequelize");
 const dbConnect = require("../dbConnect");
 const sequelizeInstance = dbConnect.Sequelize;
+const Race = require("./race")
+const Class = require("./class")
+const Weapons = require("./weapon")
+const Equipment = require("./equipment")
+const Spell = require("./spell")
+
 class Hero extends Model {}
+
 
 // Sequelize will create this table if it doesn't exist on startup
 Hero.init(
   {
-    id: {
+    heroes_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
     },
-    first_name: {
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+
+    hero_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    last_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    
+    hero_level: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     },
-    race: {
-      type: DataTypes.TEXT, // Use TEXT data type for potentially large content
+    xp: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    race_id: {
+      type: DataTypes.INTEGER, // Use TEXT data type for potentially large content
       allowNull: false,
       unique: false,
     },
-    class: {
-      type: DataTypes.STRING,
-      allowNull: true,
-      unique: false,
-    },
-    xp_earned: {
+    class_id: {
       type: DataTypes.INTEGER,
       allowNull: true,
+      unique: false,
     },
     background: {
-      type: DataTypes.TEXT, // Use TEXT data type for potentially large content
-      allowNull: true,
-    },
-    details: {
-      type: DataTypes.TEXT, // Use TEXT data type for potentially large content
+      type: DataTypes.TEXT,
       allowNull: true,
     },
     weapon_ids: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER, // Use TEXT data type for potentially large content
       allowNull: true,
     },
     spell_ids: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.INTEGER, // Use TEXT data type for potentially large content
       allowNull: true,
     },
     equipment_ids: {
@@ -116,4 +125,21 @@ Hero.init(
 //   console.log("Hero table created and example data inserted");
 // });
 
+Hero.hasOne(Race, { foreignKey: 'race_id' });
+Hero.hasOne(Class, { foreignKey: 'class_id' });
+Hero.hasMany(Weapons, {foreignKey: 'weapons_id'})
+Hero.hasMany(Equipment, { foreignKey: 'equipment_ids' });
+Hero.hasMany(Spell, { foreignKey: 'spells_ids' });
+
 module.exports = Hero;
+
+
+/*
+To add a user_id to a hero:
+
+UPDATE heroes
+SET user_id = 1 -- Replace with the appropriate user's id
+WHERE heroes_id = 1; -- Replace with the hero's id
+
+
+*/
