@@ -31,10 +31,10 @@ router.put("/:id", (req, res) => {
 router.delete("/:id", (req, res) => {
   Controllers.user.deleteUser(req, res);
 });
-//http://localhost:8000/api/users/character/:<id>
-router.put("/character/:id", (req, res) => {
-  Controllers.user.updateCharacterid(req, res);
-}); //new route created to update the character id
+//http://localhost:8000/api/users/hero/:<id>
+router.put("/hero/:id", (req, res) => {
+  Controllers.user.updateHeroid(req, res);
+}); //new route created to update the character ids associated within the user table to the hero table. Idea being this is json format that ties an array Of numbers to user and all the numbers in array are associated with hero_ids therefore they now belong to user. 
 
 //http://localhost:8000/api/users/encounter/:<id>
 router.put("/encounter/:id", (req, res) => {

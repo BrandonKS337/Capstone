@@ -91,7 +91,7 @@ const updateUser = (req, res) => {
 /*Sudo: 
 Setting up in this method to cooperate with mySQL cause they hate arrays
 */
-const updateCharacterid = async (req, res) => {
+const updateHeroid = async (req, res) => {
   //updates the user matching the ID from the param using JSON data POSTed in request body
   const user = await Models.User.findAll({
     where: {
@@ -182,6 +182,6 @@ module.exports = {
   updateUser,
   deleteUser,
   getUsersByIdTestPassword,
-  updateCharacterid,
+  updateHeroid,
   updateEncounterid
 };

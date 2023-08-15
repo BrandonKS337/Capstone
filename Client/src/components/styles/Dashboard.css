@@ -1,0 +1,10 @@
+/* Dashboard.css */
+.dashboard-container {
+  background-image: url("../assets/dashboard1.jpg"); /* Update the path accordingly */
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Ensure the background covers the entire viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
