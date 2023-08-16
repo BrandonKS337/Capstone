@@ -22,6 +22,7 @@ Monster.init(
     monster_name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true
     },
     difficulty_level: {
       type: DataTypes.INTEGER,
@@ -48,15 +49,15 @@ Monster.init(
       allowNull: true,
     },
     weapon_ids: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.JSON,
       allowNull: true,
     },
     spell_ids: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.JSON,
       allowNull: true,
     },
     equipment_ids: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.JSON,
       allowNull: true,
     },
   },

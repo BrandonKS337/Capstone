@@ -13,7 +13,7 @@ class Hero extends Model {}
 // Sequelize will create this table if it doesn't exist on startup
 Hero.init(
   {
-    heroes_id: {
+    hero_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       autoIncrement: true,

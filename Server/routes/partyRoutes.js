@@ -25,7 +25,7 @@ router.put("/:id", (req, res) => {
 
 // Delete a party by ID, http://localhost:8000/api/partyes/:<id>
 router.delete("/:id", (req, res) => {
-  Controllers.hero.deleteParty(req, res);
+  Controllers.party.deleteParty(req, res);
 });
 
 

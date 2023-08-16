@@ -25,25 +25,31 @@ http://localhost:8000/api/users
 
 /////////// USERS ////////////////
 User - POST schema example
+```
 http://localhost:8000/api/users/createUser
 {
-"firstName": "John",
-"lastName": "JingleHiemerSchmit",
-"emailId": "johnJS@email.com",
-"password": "123456"
+    "firstName": "Alpha",
+    "lastName": "Omega",
+    "username": "Lil Bundie",
+    "email": "firstUser@email.com",
+    "password": "12345"
 }
+```
 
 USER - PUT aka Update Schema
+```
 http://localhost:8000/api/users/2
 {
 "firstName": "23",
 "lastName": "23",
 "emailId": "emai3l@email",
 "password": "123456"
-}
+}```
 
 USER - DELETE aka.....delete user
+```
 http://localhost:8000/api/users/2
+```
 
 
 /////////////////// POSTS ////////////////////

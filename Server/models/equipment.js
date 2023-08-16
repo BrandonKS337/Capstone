@@ -12,6 +12,10 @@ Equipment.init(
       autoIncrement: true,
       primaryKey: true,
     },
+    equipment_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   },
   {
     sequelize: sequelizeInstance,

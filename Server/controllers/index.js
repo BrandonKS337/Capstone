@@ -6,5 +6,10 @@ module.exports={
     monster: require('./monsterController'),
     party: require('./partyController'),
     session: require('./sessionController'),
-    encounter: require('./encounterController')
+    encounter: require('./encounterController'),
+    classes: require('./classController'),
+    weapon: require('./weaponController'),
+    spell: require('./spellController'),
+    race: require('./raceController'),
+    equipment: require('./equipmentController')
     }

@@ -16,7 +16,7 @@ const getEncounters = (res) => {
 };
 const getEncounterById = (req, res) => {
   Models.Encounter.findAll({
-    where: { id: req.params.id },
+    where: { encounter_id: req.params.id },
   })
     .then(function (data) {
       res.send({ result: 200, data: data });
@@ -40,7 +40,7 @@ const createEncounter = (data, res) => {
 
 const updateEncounter = (req, res) => {
   //updates the Hero matching the ID from the param using JSON data POSTed in request body
-  Models.Encounter.update(req.body, { where: { id: req.params.id } })
+  Models.Encounter.update(req.body, { where: { encounter_id: req.params.id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
     })
@@ -52,7 +52,7 @@ const updateEncounter = (req, res) => {
 
 const deleteEncounter = (req, res) => {
   //deletes the Hero matching the ID from the param
-  Models.Encounter.destroy({ where: { id: req.params.id } })
+  Models.Encounter.destroy({ where: { encounter_id: req.params.id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
     })

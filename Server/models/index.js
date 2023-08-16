@@ -8,8 +8,8 @@ const Party = require("./party");
 const Session = require("./session");
 const Monster = require("./monster");
 const Race = require("./race");
-const Class = require("./class");
-const Weapons = require("./weapon");
+const Classes = require("./class");
+const Weapon = require("./weapon");
 const Spell = require("./spell");
 const Equipment = require("./equipment");
 
@@ -22,8 +22,8 @@ async function init() {
   await Session.sync();
   await Monster.sync();
   await Race.sync();
-  await Class.sync();
-  await Weapons.sync();
+  await Classes.sync();
+  await Weapon.sync();
   await Spell.sync();
   await Equipment.sync();
 }
@@ -39,8 +39,8 @@ module.exports = {
   Session,
   Monster,
   Race,
-  Class,
-  Weapons,
+  Classes,
+  Weapon,
   Spell,
   Equipment,
 };

@@ -17,12 +17,16 @@ Party.init(
       autoIncrement: true,
       primaryKey: true,
     },
+    party_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     dm_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
     player_ids: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.JSON,
       allowNull: true,
     },
     hero_ids: {
@@ -30,7 +34,7 @@ Party.init(
       allowNull: true,
     },
     session_ids: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.JSON,
       allowNull: true,
     },
   },

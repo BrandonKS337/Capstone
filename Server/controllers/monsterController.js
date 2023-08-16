@@ -16,7 +16,7 @@ const getMonsters = (res) => {
 };
 const getMonsterById = (req, res) => {
   Models.Monster.findAll({
-    where: { id: req.params.id },
+    where: { monster_id: req.params.id },
   })
     .then(function (data) {
       res.send({ result: 200, data: data });
@@ -40,7 +40,7 @@ const createMonster = (data, res) => {
 
 const updateMonster = (req, res) => {
   //updates the Hero matching the ID from the param using JSON data POSTed in request body
-  Models.Monster.update(req.body, { where: { id: req.params.id } })
+  Models.Monster.update(req.body, { where: { monster_id: req.params.id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
     })
@@ -52,7 +52,7 @@ const updateMonster = (req, res) => {
 
 const deleteMonster = (req, res) => {
   //deletes the Hero matching the ID from the param
-  Models.Monster.destroy({ where: { id: req.params.id } })
+  Models.Monster.destroy({ where: { monster_id: req.params.id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
     })

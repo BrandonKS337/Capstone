@@ -2,21 +2,18 @@
 
 const Models = require("../models");
 
-const getHeroes = (res) => {
-  //promise based functions. .findall is the promise and .then resolves the promise doing something with the data found.
-  Models.Hero.findAll({})
-    //finds all Heros
-    .then(function (data) {
-      res.send({ result: 200, data: data });
-    })
+const getRaces = (res) => {
+  //finds all Posts
+  Models.Race.findAll({})
+    .then((data) => res.send({ result: 200, data: data }))
     .catch((err) => {
-      console.log("Error: ", err);
-      throw err;
+      console.log(err);
+      res.send({ result: 500, error: err.message });
     });
 };
-const getHeroById = (req, res) => {
-  Models.Hero.findAll({
-    where: { hero_id: req.params.id },
+const getRaceById = (req, res) => {
+  Models.Race.findAll({
+    where: { race_id: req.params.id },
   })
     .then(function (data) {
       res.send({ result: 200, data: data });
@@ -27,8 +24,8 @@ const getHeroById = (req, res) => {
     });
 };
 
-const createHero = (data, res) => {
-  Models.Hero.create(data)
+const createRace = (data, res) => {
+  Models.Race.create(data)
     .then((data) => {
       res.send({ result: 201, data: data });
     })
@@ -38,9 +35,9 @@ const createHero = (data, res) => {
     });
 };
 
-const updateHero = (req, res) => {
+const updateRace = (req, res) => {
   //updates the Hero matching the ID from the param using JSON data POSTed in request body
-  Models.Hero.update(req.body, { where: { hero_id: req.params.id } })
+  Models.Race.update(req.body, { where: { race_id: req.params.id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
     })
@@ -50,9 +47,9 @@ const updateHero = (req, res) => {
     });
 };
 
-const deleteHero = (req, res) => {
+const deleteRace = (req, res) => {
   //deletes the Hero matching the ID from the param
-  Models.Hero.destroy({ where: { hero_id: req.params.id } })
+  Models.Race.destroy({ where: { race_id: req.params.id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
     })
@@ -63,9 +60,9 @@ const deleteHero = (req, res) => {
 };
 
 module.exports = {
-  getHeroes,
-  getHeroById,
-  createHero,
-  updateHero,
-  deleteHero,
+  getRaces,
+  getRaceById,
+  createRace,
+  updateRace,
+  deleteRace,
 };

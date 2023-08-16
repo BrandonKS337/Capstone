@@ -14,6 +14,18 @@ Session.init(
       autoIncrement: true,
       primaryKey: true,
     },
+    session_title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: true, //might need to change this later.... setting true for now because I can't be a user via postman that I know of
+      references: {
+        model: "users",
+        key: "id"
+      }
+    },
     post: {
       type: DataTypes.BLOB,
       allowNull: true,
@@ -23,7 +35,7 @@ Session.init(
       allowNull: true,
     },
     encounter_ids: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.JSON,
       allowNull: true,
     },
   },

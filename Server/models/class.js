@@ -14,6 +14,23 @@ Class.init(
       autoIncrement: true,
       primaryKey: true,
     },
+    class_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    armor_class: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    atk_dmg: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    health: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    }
+    
   },
   {
     sequelize: sequelizeInstance,

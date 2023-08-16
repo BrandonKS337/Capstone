@@ -12,6 +12,10 @@ Race.init(
       autoIncrement: true,
       primaryKey: true,
     },
+    race_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   },
   {
     sequelize: sequelizeInstance,

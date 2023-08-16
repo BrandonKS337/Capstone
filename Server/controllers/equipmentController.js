@@ -2,10 +2,10 @@
 
 const Models = require("../models");
 
-const getPartys = (res) => {
+const getEquipment = (res) => {
   //promise based functions. .findall is the promise and .then resolves the promise doing something with the data found.
-  Models.Party.findAll({})
-    //finds all Partys//the basics inside the party data.
+  Models.Equipment.findAll({})
+    //finds all Equipment
     .then(function (data) {
       res.send({ result: 200, data: data });
     })
@@ -14,9 +14,9 @@ const getPartys = (res) => {
       throw err;
     });
 };
-const getPartyById = (req, res) => {
-  Models.Party.findAll({
-    where: { party_id: req.params.id },
+const getEquipmentById = (req, res) => {
+  Models.Equipment.findAll({
+    where: { equipment_id: req.params.id },
   })
     .then(function (data) {
       res.send({ result: 200, data: data });
@@ -27,8 +27,8 @@ const getPartyById = (req, res) => {
     });
 };
 
-const createParty = (data, res) => {
-  Models.Party.create(data)
+const createEquipment = (data, res) => {
+  Models.Equipment.create(data)
     .then((data) => {
       res.send({ result: 201, data: data });
     })
@@ -38,9 +38,9 @@ const createParty = (data, res) => {
     });
 };
 
-const updateParty = (req, res) => {
-  //updates the party matching the ID from the param using JSON data POSTed in request body
-  Models.Party.update(req.body, { where: { party_id: req.params.id } })
+const updateEquipment = (req, res) => {
+  //updates the Hero matching the ID from the param using JSON data POSTed in request body
+  Models.Equipment.update(req.body, { where: { equipment_id: req.params.id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
     })
@@ -50,9 +50,9 @@ const updateParty = (req, res) => {
     });
 };
 
-const deleteParty = (req, res) => {
-  //deletes the party matching the ID from the param
-  Models.Party.destroy({ where: { party_id: req.params.id } })
+const deleteEquipment = (req, res) => {
+  //deletes the Hero matching the ID from the param
+  Models.Equipment.destroy({ where: { equipment_id: req.params.id } })
     .then(function (data) {
       res.send({ result: 200, data: data });
     })
@@ -63,9 +63,9 @@ const deleteParty = (req, res) => {
 };
 
 module.exports = {
-  getPartys,
-  getPartyById,
-  createParty,
-  updateParty,
-  deleteParty,
+  getEquipment,
+  getEquipmentById,
+  createEquipment,
+  updateEquipment,
+  deleteEquipment,
 };

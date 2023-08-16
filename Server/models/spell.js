@@ -12,6 +12,10 @@ Spell.init(
       autoIncrement: true,
       primaryKey: true,
     },
+    spell_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   },
   {
     sequelize: sequelizeInstance,
