@@ -16,15 +16,15 @@ Session.init(
     },
     session_title: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: true, //might need to change this later.... setting true for now because I can't be a user via postman that I know of
       references: {
         model: "users",
-        key: "id"
-      }
+        key: "id",
+      },
     },
     post: {
       type: DataTypes.BLOB,
@@ -37,6 +37,10 @@ Session.init(
     encounter_ids: {
       type: DataTypes.JSON,
       allowNull: true,
+      references: {
+        model: "users",
+        key: "id",
+      },
     },
   },
   {
@@ -51,7 +55,6 @@ Session.init(
 /*see below for notes on when using this error*/
 
 module.exports = Session;
-
 
 /*C:\Users\b1aks\OneDrive\Desktop\IoD\Capstone\node_modules\sequelize\lib\associations\mixin.js:63
       throw new Error(`${source.name}.${_.lowerFirst(Type.name)} called with something that's not a subclass of Sequelize.Model`);
