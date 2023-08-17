@@ -15,7 +15,19 @@ Equipment.init(
     equipment_name: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
+    weight: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    quantity: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    value: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
   },
   {
     sequelize: sequelizeInstance,

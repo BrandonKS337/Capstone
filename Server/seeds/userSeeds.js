@@ -4,18 +4,21 @@ const data = [
   {
     firstName: "first",
     lastName: "person",
+    username: "Joanna",
     email: "user1@email.com",
     password: "12345",
   },
   {
     firstName: "second",
     lastName: "person",
+    username: "Lil Bobby",
     email: "user2@email.com",
     password: "12345",
   },
   {
     firstName: "third",
     lastName: "person",
+    username: "THE STEVENATOR!!",
     email: "user3@email.com",
     password: "12345",
   },
@@ -28,9 +31,12 @@ const seedUsers = async () => {
     // Check if the user exists in the DB already
     const user = await Models.User.findAll({
       where: {
-        email: element.email,
         firstName: element.firstName,
         lastName: element.lastName,
+        username: element.username,
+        email: element.email,
+        password: element.password
+        
       },
       raw: true,
     })
@@ -55,7 +61,7 @@ const seedUsers = async () => {
           throw err;
         });
     } else {
-      console.log("User exists", user[0].email);
+      console.log("User exists", user[0].username);
     }
   }
 };

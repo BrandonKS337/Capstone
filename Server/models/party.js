@@ -30,7 +30,7 @@ Party.init(
       allowNull: true,
     },
     hero_ids: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.JSON,
       allowNull: true,
     },
     session_ids: {

@@ -40,11 +40,7 @@ Monster.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
-    background: {
-      type: DataTypes.TEXT, // Use TEXT data type for potentially large content
-      allowNull: true,
-    },
-    details: {
+    description: {
       type: DataTypes.TEXT, // Use TEXT data type for potentially large content
       allowNull: true,
     },

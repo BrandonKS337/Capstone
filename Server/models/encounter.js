@@ -25,7 +25,7 @@ Encounter.init(
       allowNull: false,
     },
     encounter_description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: true
     },
     dm_id: {
@@ -34,26 +34,21 @@ Encounter.init(
       // autoIncrement:true
     },
     party_members: {
-      type: DataTypes.INTEGER, // Use TEXT data type for potentially large content
+      type: DataTypes.JSON, // Use TEXT data type for potentially large content
       allowNull: true,
       // autoIncrement:true
     },
     heroes_ids: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.JSON,
       allowNull: true,
       // autoIncrement:true
     },
     monster_ids: {
-      type: DataTypes.STRING,
+      type: DataTypes.JSON,
       allowNull: true,
       // autoIncrement:true
     },
     winner: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      // autoIncrement:true
-    },
-    loser: {
       type: DataTypes.INTEGER,
       allowNull: true,
       // autoIncrement:true
