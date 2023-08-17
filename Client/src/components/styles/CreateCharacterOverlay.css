@@ -1,0 +1,56 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .overlay-content {
+    width: 65%;
+    height: 85%;
+    background-color: white;
+    display: flex;
+    
+  }
+  
+  .left-group {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .right-group {
+    width: 65%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .stats-box {
+    border: 1px solid #ccc;
+    /* padding: 10px; */
+    /* margin-top: 20px; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    justify-content: space-between;
+    align-items: start;
+    padding-left: 10rem;
+
+  }
+  
+  .stats-container {
+    margin-top: 10px;
+  }
+  
+  .close-button {
+    height: 2rem;
+    width: 6rem;
+  }
+  

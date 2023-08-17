@@ -37,10 +37,11 @@ Session.init(
     encounter_ids: {
       type: DataTypes.JSON,
       allowNull: true,
-      references: {
-        model: "users",
-        key: "id",
-      },
+      // references: {
+      //   model: "encounters",
+      //   key: "encounter_id",
+      // },
+      // foreignKey: "encounter_ids"
     },
   },
   {
