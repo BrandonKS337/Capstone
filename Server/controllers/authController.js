@@ -34,7 +34,6 @@ const signUpUser = async (data, res) => {
     });
 };
 
-
 //added an updatePassword route because normal PUT method from users doesn't actually run users change through hashing it just updates to the actually password they entered killing the purpose of bcrypt doing it during signup
 const updatePassword = async (userId, newPassword, res) => {
   try {
@@ -44,37 +43,48 @@ const updatePassword = async (userId, newPassword, res) => {
     const hashedPassword = bcrypt.hashSync(newPassword, salt);
 
     // Update the password in the database
-    Models.User.update( //sequelize expects objects when updating so take in password and user id as such
-      { password: hashedPassword }, 
+    Models.User.update(
+      //sequelize expects objects when updating so take in password and user id as such
+      { password: hashedPassword },
       { where: { id: userId } } //targets specific user id in "sequelize" style terms... where: {target row} is the syntax template
     ).then((result) => {
       if (result[0] === 1) {
-        res.status(200).json({ success: true, message: "Password updated successfully." }); //for later use can extract rsp object here to display update to user....write that in the trello notes to do
+        res
+          .status(200)
+          .json({ success: true, message: "Password updated successfully." }); //for later use can extract rsp object here to display update to user....write that in the trello notes to do
       } else {
         res.status(404).json({ success: false, message: "User not found." });
       }
     });
   } catch (err) {
     console.log("Error:", err);
-    res.status(500).send({ success: false, message: "An error occurred while updating the password." });
+    res
+      .status(500)
+      .send({
+        success: false,
+        message: "An error occurred while updating the password.",
+      });
   }
 };
 
-const loginUserByEmail = (req, res) => { //changed (body, res) here to req,res...body wasnt being used???
+const loginUserByEmail = (req, res) => {
+  //changed (body, res) here to req,res...body wasnt being used???
   const unhashedPassword = req.body.password; //changed this aswell from req.data.password to req.body.password....well see if that screws things up
   const email = req.body.email;
 
   Models.User.scope("withPassword")
-    .findAll({ where: { email: email } })
+    .findAll({ where: { email: email } }) //can add in other fields like username or something to double the verification here
     .then((data) => {
       if (
         data &&
         bcrypt.compareSync(unhashedPassword, data[0].dataValues.password)
       ) {
         data[0].dataValues.password = undefined;
-        res.status(200).send({ success: true, data: data });
+        res
+          .status(200)
+          .send({ success: true, message: "Boom All logged in and good to go", data: data });
       } else {
-        console.log("password is incorrect");
+        console.log("Username or password is incorrect");
 
         res
           .status(403)
@@ -90,5 +100,5 @@ const loginUserByEmail = (req, res) => { //changed (body, res) here to req,res..
 module.exports = {
   signUpUser,
   loginUserByEmail,
-  updatePassword
+  updatePassword,
 };

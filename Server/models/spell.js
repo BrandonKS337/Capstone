@@ -15,6 +15,30 @@ Spell.init(
     spell_name: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    description: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    level: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    school: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    components: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    range: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    duration: {
+      type: DataTypes.STRING,
+      allowNull: false
     }
   },
   {

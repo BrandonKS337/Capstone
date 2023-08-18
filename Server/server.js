@@ -17,10 +17,11 @@ const raceRoutes = require("./routes/raceRoutes");
 const spellRoutes = require("./routes/spellRoutes");
 const classRoutes = require("./routes/classRoutes");
 const equipmentRoutes = require("./routes/equipmentRoutes");
+
+//comment these lines out if creating a new db. These populate the table row data with premades
 const seedRunner = require("./seeds/seedsController")
-
-
 seedRunner.runAllSeeds()
+
 
 app.use(express.json());
 
@@ -38,6 +39,8 @@ app.use("/api/races", raceRoutes);
 app.use("/api/spells", spellRoutes);
 app.use("/api/weapons", weaponRoutes);
 app.use("/api/classes", classRoutes);
+
+
 
 
 // test route to verify app running. Commented out as it's not necessary but good to keep around

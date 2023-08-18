@@ -10,6 +10,11 @@ const equipmentSeeds = require("./equipmentSeeds");
 const heroSeeds = require("./heroSeeds");
 const monsterSeeds = require("./monsterSeeds");
 const partySeeds = require("./partySeeds")
+const postSeeds = require("./postSeeds")
+const raceSeeds = require("./raceSeeds")
+const sessionSeeds = require("./sessionSeeds")
+const spellSeeds = require("./spellSeeds")
+const weapons = require("./weaponSeeds")
 
 
 //async func to run em all 
@@ -21,6 +26,14 @@ async function runAllSeeds() {
   await heroSeeds.seedHeroes();
   await monsterSeeds.seedMonsters();
   await partySeeds.seedParties()
+  await postSeeds.seedPosts()
+  await raceSeeds.seedRaces()
+  await sessionSeeds.seedSessions()
+  await spellSeeds.seedSpells()
+  await weapons.seedWeapons()
+
+
+
   console.log("All seeds completed successfully!");
 }
 

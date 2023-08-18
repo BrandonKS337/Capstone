@@ -15,7 +15,27 @@ Weapons.init(
     weapon_name: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
+    type: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    damage: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    properties: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    weight: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
   },
   {
     sequelize: sequelizeInstance,
