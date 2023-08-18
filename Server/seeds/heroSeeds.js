@@ -28,7 +28,33 @@ const data = [
     class_id: 2,
     background: "Silvia Moonshadow, a enigmatic and skilled rogue, hails from the secretive realm of the Nightshade Grove. With moonlit eyes and an uncanny ability to blend into the shadows, she navigates the darkness with unparalleled finesse. Silvia's past remains veiled in mystery, her motivations obscured by her enigmatic demeanor. Known for her stealthy prowess and silver-tongued charm, Silvia Moonshadow traverses the realms, unraveling secrets and threading her way through the intricate webs of intrigue.",
   },
-
+  {
+    user_id: 1,
+    hero_name: "Aurora Swiftstrike",
+    hero_level: 4,
+    xp: 64896,
+    race_id: 4,
+    class_id: 2,
+    background: "A valiant elven warrior, was born under the gleaming Northern Lights that illuminated her destiny. Raised by a tribe of skilled archers, she mastered the art of precision and agility, earning her the moniker Swiftstrike. With her trusty bow and enchanted arrows, Aurora seeks to protect the realms from encroaching darkness, embodying the radiant spirit of the Aurora that guides her path.",
+  },
+  {
+    user_id: 3,
+    hero_name: "Galen Stormrider",
+    hero_level: 4,
+    xp: 64896,
+    race_id: 4,
+    class_id: 2,
+    background: "Galen Stormrider, a seasoned sailor and mage, hails from the coastal city of Arcanholm, where turbulent seas and tempestuous magic intertwine. Having survived a shipwreck caused by a magical storm, Galen emerged with newfound command over wind and water. Clad in sea-worn armor, he sails across the arcane currents, seeking ancient secrets and aiding those in need, as the embodiment of nature's fierce and untamed forces.",
+  },
+  {
+    user_id: 4,
+    hero_name: "Lyra Nightshade",
+    hero_level: 2,
+    xp: 122545,
+    race_id: 4,
+    class_id: 2,
+    background: "Lyra Nightshade, a shadow dancer of the secretive Moonlit Order, was trained in the arts of stealth and subterfuge. Born into nobility, she forsook her privileged life to embrace the darkness that cast its allure upon her. As the Nightshade, Lyra wields twin daggers with lethal grace, prowling the night to thwart evildoers and unveil hidden plots. Her enigmatic past and veiled motives add to the mystique surrounding her vigilante persona.",
+  },
 
 ];
 

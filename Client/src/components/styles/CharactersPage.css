@@ -1,0 +1,20 @@
+.pageContainer {
+  margin: 2rem;
+  padding: 2rem;
+}
+.characterCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Use space-between to evenly distribute the cards */
+  margin: 0 auto; /* Center the cards horizontally */
+  max-width: 900px; /* Limit the width of the container */
+  margin-top: 2rem;
+}
+
+.character-card {
+  width: 30%; /* Each card takes up 30% of the container width */
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}

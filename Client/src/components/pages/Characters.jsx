@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CreateCharacterOverlay from "../overlays/CreateCharacterOverlay";
+import "../styles/CharactersPage.css"
 
 export const Characters = () => {
   const [characters, setCharacters] = useState([]);
@@ -10,7 +11,7 @@ export const Characters = () => {
     setShowOverlay(!showOverlay);
     setSearchTerm(""); // Reset the search term when showing the overlay
   }
-  
+
 
   useEffect(() => {
     fetchCharacters();
@@ -35,10 +36,11 @@ export const Characters = () => {
   );
 
   return (
-    <div>
+    <div className="pageContainer">
       <h1>My Characters</h1>
       <div>
         <input
+          className="filterBar"
           type="text"
           placeholder="Search characters..."
           value={searchTerm}
@@ -47,13 +49,13 @@ export const Characters = () => {
         <button onClick={toggleOverlay}>Create Character</button>
         {showOverlay && <CreateCharacterOverlay onClose={toggleOverlay} />}
       </div>
-      <div className="character-cards">
+      <div className="characterCards">
         {filteredCharacters.map((character) => (
           <div key={character.hero_id} className="character-card">
             <h2>{character.hero_name}</h2>
             <p>Level: {character.hero_level}</p>
             <p>Xp: {character.xp}</p>
-            <p>Race: {character.race_id}</p> 
+            <p>Race: {character.race_id}</p>
             {/* Probably will just need to manually take in race.....cant get damn foreign key to work. */}
           </div>
         ))}
