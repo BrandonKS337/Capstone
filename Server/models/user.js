@@ -9,7 +9,7 @@ let dbConnect = require("../dbConnect");
 const sequelizeInstance = dbConnect.Sequelize;
 
 
-class User extends Model {}
+class User extends Model { }
 
 //checks for existing table and if it doesn't this model creates
 User.init(
@@ -73,18 +73,18 @@ User.init(
     },
   },
   {
-    sequelize: sequelizeInstance,
+    sequelize: sequelizeInstance, //these several lines create "options"
     modelName: "users",
     timestamps: true,
-    freezeTableName: true,
+    freezeTableName: true, //freezes table name so it cant be changed and break stuff
     defaultScope: {
       attributes: {
-        exclude: ["password"],
+        exclude: ["password"], //this line means that the user password key doesn't get shown any time we call the model
       },
     },
-    scopes: {
+    scopes: { //this is a special scope that allows us to return password so we can verify it with becrypt
       withPassword: {
-        attributes: {},
+        attributes: {}, //leave attributes as an empty object
       },
     },
   }

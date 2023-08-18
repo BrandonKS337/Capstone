@@ -12,4 +12,11 @@ router.post("/login", (req, res) => {
   Controllers.auth.loginUserByEmail(req, res)
 })
 
+router.put("/updatepassword/:id", (req, res) => {  //sets route using PUT method to a specific id (aka in this case the users id.)
+  const userId = req.params.id; //extracts value of id param from url above and assigns as userId
+  const newPassword = req.body.newPassword; //same as above but takes the password from the body of PUT method req and sets as newPassword
+  Controllers.auth.updatePassword(userId, newPassword, res); //calls updatePassword function from authController passing in the new variables and response object
+});
+
+
 module.exports = router;

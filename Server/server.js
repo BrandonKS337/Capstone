@@ -20,22 +20,6 @@ const equipmentRoutes = require("./routes/equipmentRoutes");
 const seedRunner = require("./seeds/seedsController")
 
 
-//seeds routes
-// const seeds = require("./seeds/userSeeds");
-// const classSeeds = require("./seeds/classSeeds")
-// const encounterSeeds = require("./seeds/encounterSeeds")
-// const equipmentSeeds = require("./seeds/equipmentSeeds")
-// const heroSeeds = require("./seeds/heroSeeds")
-// const monsterSeeds = require("./seeds/monsterSeeds")
-
-
-//run seeds to populate db after tables are created
-// seeds.seedUsers();
-// classSeeds.seedClasses()
-// encounterSeeds.seedEncounters()
-// equipmentSeeds.seedEquipment()
-// heroSeeds.seedHeroes()
-// monsterSeeds.seedMonsters()
 seedRunner.runAllSeeds()
 
 app.use(express.json());
@@ -55,9 +39,11 @@ app.use("/api/spells", spellRoutes);
 app.use("/api/weapons", weaponRoutes);
 app.use("/api/classes", classRoutes);
 
-app.get("/", (req, res) => {
-  res.json({ message: "Welcome to the nexus." });
-});
+
+// test route to verify app running. Commented out as it's not necessary but good to keep around
+// app.get("/", (req, res) => {
+//   res.json({ message: "Welcome to the nexus." });
+// });
 
 const PORT = process.env.PORT || 8080;
 

@@ -11,5 +11,6 @@ module.exports={
     weapon: require('./weaponController'),
     spell: require('./spellController'),
     race: require('./raceController'),
-    equipment: require('./equipmentController')
+    equipment: require('./equipmentController'),
+    auth: require('./authController')
     }
