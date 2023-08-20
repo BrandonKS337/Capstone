@@ -1,20 +1,220 @@
+/* CharactersPage.css */
+
 .pageContainer {
-  margin: 2rem;
-  padding: 2rem;
+  position: fixed;
+  top: 0; /* Start at the top of the viewport */
+  left: 0; /* Start at the left of the viewport */
+  right: 0; /* Extend to the right end of the viewport */
+  bottom: 0; /* Extend to the bottom end of the viewport */
+  padding: 30px;
+  font-family: sans-serif;
+  background-color: #2b2b2b;
+  color: white;
+  overflow: auto; /* Allow internal scrolling if the content overflows */
 }
+
+.top-area {
+  position: sticky;
+  top: 70px;
+  /* padding: 0.5rem; */
+  width: 100%;
+  background-color: #2b2b2b; 
+  z-index: 10;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.filterBar {
+  width: 80%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #5e5e5e;
+  background-color: #444;
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  outline: none;
+  transition: border 0.2s;
+  margin-right: 45px;
+}
+
+.filterBar:focus {
+  border-color: goldenrod;
+}
+
+.topSide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  /* margin-top: 10px; */
+  padding: 10px 20px;
+  background-color: darkred;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: red;
+}
+
 .characterCards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; /* Use space-between to evenly distribute the cards */
-  margin: 0 auto; /* Center the cards horizontally */
-  max-width: 900px; /* Limit the width of the container */
-  margin-top: 2rem;
+  gap: 20px;
+  justify-content: center;
+  position: absolute;
+  top: 16rem;
+  /* overflow-y: auto; */
+  background-color: #2b2b2b; 
+  padding-bottom: 5rem;
+
 }
 
 .character-card {
-  width: 30%; /* Each card takes up 30% of the container width */
+  perspective: 1500px;  /* Adjust this value for a deeper 3D effect */
+  width: 250px;
+  height: 350px;
+  background: #4e4e4e;
+  border-radius: 5px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;  /* You can tweak the time here */
+  transform-origin: center;
+  box-shadow: 0 0 5px rgba(205, 10, 10, 1);
+}
+
+
+.character-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+}
+
+.character-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 10px 10px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
-  border: 1px solid #ccc;
-  margin-bottom: 20px;
-  box-sizing: border-box;
+}
+
+.card-front img {
+  max-width: 100%;
+  max-height: 70%;
+  object-fit: cover;
+}
+
+/* .card-front h3 {
+  position: absolute;
+  bottom: 1rem;
+} */
+h3 {
+  position: absolute;
+  bottom: 1rem;
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /*Adds a semi-transparent background to the text for better readability */
+  border-radius: 10px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+.back-top-half {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px; /* Add some padding for spacing */
+}
+
+
+
+.level-circle {
+  width: 50px;
+  height: 50px;
+  background-color: darkred;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  /* margin-left: auto; */
+  position: absolute;
+  top: 1rem;
+  right: 1rem
+}
+
+.card-back h2 {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  max-width: 60%;
+}
+
+
+.stats {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* justify-content: center;
+  align-items: center; */
+  position: absolute;
+  bottom: 48%;
+  margin-top: 1rem;
+}
+
+.background {
+  width: 100%;
+  max-height: 50%;
+  overflow-y: auto;
+  border: 1px solid #5e5e5e;
+  padding: 10px;
+  font-size: 0.8rem;
 }

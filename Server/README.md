@@ -159,3 +159,6 @@ POST - http://localhost:8000/api/encounters/create creates encounters
 
 
 ///todos: look into trillo for todo list
+
+
+img - johnny beansprout = https://i.pinimg.com/1200x/51/56/c9/5156c904faec587f35f130f2ce37058d.jpg

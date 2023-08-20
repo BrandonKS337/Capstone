@@ -9,7 +9,6 @@ const sequelizeInstance = dbConnect.Sequelize;
 
 class Hero extends Model {}
 
-
 // Sequelize will create this table if it doesn't exist on startup
 Hero.init(
   {
@@ -28,28 +27,43 @@ Hero.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    
+
     hero_level: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
     },
     xp: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
     },
+    // race_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   unique: false,
+    // },
     race_id: {
-      type: DataTypes.INTEGER, // Use TEXT data type for potentially large content
+      type: DataTypes.STRING,
       allowNull: false,
       unique: false,
     },
     class_id: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING, //setting to string for manual entry/ Should be set up through associations but WHATERVER...stupid sql
       allowNull: true,
       unique: false,
     },
     background: {
       type: DataTypes.TEXT,
       allowNull: true,
+    },
+    // image: {      //this is to take in actual img
+    //   type: DataTypes.BLOB("long"),
+    //   allowNull: true,
+    //   comment: "Character image",
+    // },
+    image_url: {   //this is to take in url for image
+      type: DataTypes.STRING,
+      allowNull: true,
+      comment: "URL for character image",
     },
     weapon_ids: {
       type: DataTypes.INTEGER, // Use TEXT data type for potentially large content
@@ -99,47 +113,11 @@ Hero.init(
   }
 );
 
-// Hero.sync({ force: true }).then(async () => {
-//   // Populate example heroes
-//   await Hero.bulkCreate([
-//     {
-//       first_name: "Johnny",
-//       last_name: "Beansprout",
-//       race: "Human",
-//       class: "NPC",
-//     },
-//     {
-//       first_name: "Eldric",
-//       last_name: "Fireblade",
-//       race: "Elf",
-//       class: "Warrior",
-//     },
-//     {
-//       first_name: "Sylvia",
-//       last_name: "Moonshadow",
-//       race: "Half-Elf",
-//       class: "Mage",
-//     },
-//   ]);
-//   //if this force pushes then it console log displays below msg to user in terminal
-//   console.log("Hero table created and example data inserted");
-// });
-
-// Hero.hasOne(Race, { foreignKey: 'race_id' });
-// Hero.hasOne(Class, { foreignKey: 'class_id' });
-// Hero.hasMany(Weapons, {foreignKey: 'weapons_id'})
-// Hero.hasMany(Equipment, { foreignKey: 'equipment_ids' });
-// Hero.hasMany(Spell, { foreignKey: 'spells_ids' });
-
 module.exports = Hero;
 
-
-/*
-To add a user_id to a hero:
-
-UPDATE heroes
-SET user_id = 1 -- Replace with the appropriate user's id
-WHERE heroes_id = 1; -- Replace with the hero's id
-
-
-*/
+//if I end up storing image elsewhere can use this instade of image
+// imageUrl: {
+//   type: DataTypes.STRING,
+//   allowNull: true,
+//   comment: "URL for character image",
+// }

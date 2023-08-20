@@ -8,13 +8,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100000;
   }
   
   .overlay-content {
     width: 65%;
-    height: 85%;
+    height: 75%;
     background-color: white;
     display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
     
   }
   
