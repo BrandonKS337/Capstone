@@ -1,5 +1,3 @@
-
-
 .active{
     background-color: #f9c684;
 }
@@ -16,12 +14,22 @@ nav {
 }
 
 nav .title {
+    display: flex;
+    flex-direction: row;
     font-size: 1.5rem;
     margin: 1rem;
     padding-left: 2rem;
     font-weight: bold;
     text-decoration: none;
     color: black;
+    /* border: 1px solid red; */
+    
+}
+.hint {
+    font-size: 10px;
+    /* position:static;
+    right: 0;
+    bottom: 0 */
 }
 
 nav ul {

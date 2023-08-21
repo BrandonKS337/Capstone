@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../styles/Login.css"; // Path to your styles folder
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
   //set up use state effects for taking userName/password/remember so that the data can be transferred
@@ -9,6 +10,7 @@ export const Login = () => {
   const [password, setPassword] = useState(""); //holds the password input
   const [rememberMe, setRememberMe] = useState(false); //holds the remember me state//not used just yet
   const [errorMessage, setErrorMessage] = useState(""); //just setting this to help with displaying any error messages
+  const navigate = useNavigate(); // setting this so that can push a user from root to dashboard on successfully verified login attempts automatically
 
   const handleLogin = async () => {
     try {
@@ -23,7 +25,10 @@ export const Login = () => {
 
       if (response.data.success) {
         console.log("Successfully logged in: ", response.data.data);
-        //will need to insert code here for what happens when response is good.... like route to dashboard ('/api/dashboard')
+
+        //this should navigate user on login success to dashboard or if changed whatever target route endpoint entered.
+        navigate('/Home')
+
       } else {
         setErrorMessage(response.data.data);
       }

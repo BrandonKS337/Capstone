@@ -3,8 +3,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  object-fit: fill;
-  
+  height: 100%;
 }
 
 .LoginPage .overlap-wrapper {
@@ -18,8 +17,8 @@
   background-image: url(../assets/firegiant.jpg);
   background-position: 50% 50%;
   background-size: cover;
-  height: 1024px;
-  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .LoginPage .appName {
