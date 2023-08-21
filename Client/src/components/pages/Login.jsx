@@ -27,8 +27,7 @@ export const Login = () => {
         console.log("Successfully logged in: ", response.data.data);
 
         //this should navigate user on login success to dashboard or if changed whatever target route endpoint entered.
-        navigate('/Home')
-
+        navigate("/Home");
       } else {
         setErrorMessage(response.data.data);
       }
@@ -64,54 +63,68 @@ export const Login = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
+              <div className="move">
+                <div className="remember-me-button">
+                  <div className="leftRemember">
+                    <input
+                      className="checkbox"
+                      type="checkbox"
+                      checked={rememberMe}
+                      onChange={() => setRememberMe((prevState) => !prevState)}
+                    />
+
+                    <div className="text-wrapper-6">Remember Me</div>
+                  </div>
+                  <div className="rightRemember">
+                    {errorMessage && (
+                      <div className="error-message">{errorMessage}</div>
+                    )}
+                  </div>
+                  {/* This is the button that submits info to backend */}
+                  <div className="loginRow">
+                    <button className="login-button" onClick={handleLogin}>
+                      <div className="text-wrapper">LOGIN</div>
+                    </button>
+                    <div className="forgotPWrd">Forgot password?</div>
+                  </div>
+                  <img
+                    className="altLoginBreaker"
+                    alt="Or divider"
+                    src="./src/components/assets/altloginbuttons/Or Divider.svg"
+                  />
+                  <p className="noAccount">
+                    <span className="span">
+                      Don’t have an Account?&nbsp;&nbsp;
+                    </span>
+                    <span className="hyperlink">Create new</span>
+                  </p>
+                  <div className="altLogins">
+                    
+                      <img
+                        className="google-login"
+                        alt="Google login"
+                        src="./src/components/assets/altloginbuttons/Google Login.svg"
+                      />
+                      <img
+                        className="facebook-login"
+                        alt="Facebook login"
+                        src="./src/components/assets/altloginbuttons/Facebook Login.svg"
+                      />
+                      <img
+                        className="apple-login"
+                        alt="Apple login"
+                        src="./src/components/assets/altloginbuttons/Apple Login.svg"
+                      />
+                    
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/*This is the button that submits info to backend */}
-          <button className="login-button" onClick={handleLogin}>
-            {/* <button className="overlap-group" onClick={handleLogin}> */}
-            <div className="text-wrapper">LOGIN</div>
-            {/* </button> */}
-          </button>
-          <div className="remember-me-button">
-            <input
-              className="checkbox"
-              type="checkbox"
-              checked={rememberMe}
-              onChange={() => setRememberMe((prevState) => !prevState)}
-            />
-            <div className="text-wrapper-6">Remember Me</div>
-          </div>
-          {errorMessage && <div className="error-message">{errorMessage}</div>}
-
-          <img
-            className="altLoginBreaker"
-            alt="Or divider"
-            src="./src/components/assets/altloginbuttons/Or Divider.svg"
-          />
-          <div className="forgotPWrd">Forgot password?</div>
-          <p className="noAccount">
-            <span className="span">Don’t have an Account?&nbsp;&nbsp;</span>
-            <span className="hyperlink">Create new</span>
-          </p>
           <div className="copright-footer">
             Copyright © 2023 Brandon Builds it LLC | Archives | Policies | FAQ
           </div>
-          <img
-            className="google-login"
-            alt="Google login"
-            src="./src/components/assets/altloginbuttons/Google Login.svg"
-          />
-          <img
-            className="facebook-login"
-            alt="Facebook login"
-            src="./src/components/assets/altloginbuttons/Facebook Login.svg"
-          />
-          <img
-            className="apple-login"
-            alt="Apple login"
-            src="./src/components/assets/altloginbuttons/Apple Login.svg"
-          />
         </div>
       </div>
     </div>
