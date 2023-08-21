@@ -1,0 +1,230 @@
+.LoginPage {
+  background-color: #696868;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.LoginPage .overlap-wrapper {
+  background-color: #696868;
+  border: 1px none;
+  height: 1024px;
+  width: 1440px;
+}
+
+.LoginPage .overlap {
+  background-image: url(../assets/firegiant.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 1024px;
+  position: relative;
+}
+
+.LoginPage .appName {
+  height: 207px;
+  left: 85px;
+  position: absolute;
+  top: 96px;
+  width: 730px;
+}
+
+.LoginPage .login-button {
+  height: 49px;
+  left: 196px;
+  position: absolute;
+  top: 577px;
+  width: 218px;
+}
+
+.LoginPage .overlap-group {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 20px;
+  height: 49px;
+  position: relative;
+  width: 216px;
+}
+
+.LoginPage .text-wrapper {
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  height: 29px;
+  left: 70px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 9px;
+}
+
+.LoginPage .user-password-inputs {
+  height: 179px;
+  left: 196px;
+  position: absolute;
+  top: 339px;
+  width: 456px;
+}
+
+.LoginPage .div {
+  background-image: url(./login-buttons.png);
+  background-size: 100% 100%;
+  height: 179px;
+  position: relative;
+  width: 452px;
+}
+
+.LoginPage .userORemail {
+  color: #696868;
+  font-family: "Inter-Italic", Helvetica;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 1000;
+  width: 452px;
+  height: 82px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 1px solid #000;
+  /* left: 2rem; */
+  line-height: normal;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.LoginPage .userPWrd {
+  color: #696868;
+  font-family: "Inter-Italic", Helvetica;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 1000;
+  width: 452px;
+  height: 82px;
+  border-radius: 20px;
+  border: 1px solid #000;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LoginPage .altLoginBreaker {
+  height: 29px;
+  left: 197px;
+  position: absolute;
+  top: 677px;
+  width: 452px;
+}
+
+.LoginPage .forgotPWrd {
+  color: #0066ff;
+  font-family: "Miltonian Tattoo-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  height: 21px;
+  left: 490px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 590px;
+  white-space: nowrap;
+}
+
+.LoginPage .noAccount {
+  color: transparent;
+  font-family: "Miltonian Tattoo-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  height: 21px;
+  left: 197px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 637px;
+  white-space: nowrap;
+}
+
+.LoginPage .span {
+  color: #ffffff;
+}
+
+.LoginPage .hyperlink {
+  color: #0057da;
+  font-family: "Microsoft Sans Serif-Regular", Helvetica;
+}
+
+.LoginPage .copright-footer {
+  height: 35px;
+  position: absolute;
+  bottom: 0;
+  width: 1440px;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.LoginPage .google-login {
+  height: 59px;
+  left: 304px;
+  position: absolute;
+  top: 814px;
+  width: 247px;
+}
+
+.LoginPage .facebook-login {
+  height: 58px;
+  left: 304px;
+  position: absolute;
+  top: 733px;
+  width: 247px;
+}
+
+.LoginPage .apple-login {
+  height: 58px;
+  left: 304px;
+  position: absolute;
+  top: 896px;
+  width: 247px;
+}
+
+.LoginPage .remember-me-button {
+  height: 21px;
+  left: 197px;
+  position: absolute;
+  top: 529px;
+  width: 157px;
+}
+
+.LoginPage .rectangle {
+  background-color: #d9d9d9;
+  border-radius: 12px;
+  height: 17px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  width: 19px;
+}
+
+.LoginPage .text-wrapper-6 {
+  color: #ffffff;
+  font-family: "Miltonian Tattoo-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  height: 21px;
+  left: 26px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+}
