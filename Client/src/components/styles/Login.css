@@ -1,0 +1,275 @@
+.LoginPage {
+  background-color: #696868;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+  
+}
+
+.LoginPage .overlap-wrapper {
+  background-color: #696868;
+  /* border: 4px solid red; */
+  height: 100%;
+  width: 100%;
+  background-image: url(../assets/firegiant.jpg);
+  background-size: cover;
+
+}
+
+/* .LoginPage .overlap {
+  background-image: url(../assets/firegiant.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+} */
+
+.LoginPage .appName {
+  height: 207px;
+  left: 85px;
+  position: absolute;
+  top: 96px;
+  width: 730px;
+}
+
+.LoginPage .login-button {
+  height: 49px;
+  /* left: 196px; */
+  /* position: absolute; */
+  /* top: 577px; */
+  width: 218px;
+  background: white;
+}
+.login-button:hover {
+  background-color: rgb(223, 52, 52);
+}
+/* 
+.LoginPage .overlap-group {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 20px;
+  height: 49px;
+  position: relative;
+  width: 216px;
+} */
+
+.LoginPage .text-wrapper {
+  color: #000000;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  height: 29px;
+  /* left: 70px; */
+  letter-spacing: 0;
+  line-height: normal;
+  /* position: absolute; */
+  text-align: center;
+  /* top: 9px; */
+}
+
+.LoginPage .user-password-inputs {
+  /* height: 179px; */
+  left: 196px;
+  position: absolute;
+  top: 339px;
+  /* width: 456px; */
+  /* border: 2px solid green; */
+  display: flex
+}
+
+.LoginPage .div {
+  /* background-image: url(./login-buttons.png); */
+  background-size: 100% 100%;
+  height: 179px;
+  position: relative;
+  width: 452px;
+
+}
+
+.LoginPage .username {
+  color: #696868;
+  font-family: "Inter-Italic", Helvetica;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 1000;
+  width: 450px;
+  height: 70px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 1px solid #000;
+  line-height: normal;
+  background: white;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.LoginPage .userPWrd {
+  color: #696868;
+  font-family: "Inter-Italic", Helvetica;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 1000;
+  width: 450px;
+  height: 70px;
+  border-radius: 20px;
+  border: 1px solid #000;
+  background: white;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  text-align: center;
+
+}
+
+.LoginPage .altLoginBreaker {
+  height: 29px;
+  /* left: 197px;
+  position: absolute;
+  top: 677px; */
+  width: 452px;
+  margin: 5px;
+}
+
+.loginRow {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  gap: 12rem;
+  align-items: flex-end;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  /* border: 2px solid yellow; */
+}
+
+.LoginPage .forgotPWrd {
+  color: #0066ff;
+  font-family: "Miltonian Tattoo-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  height: 21px;
+  /* left: 490px; */
+  letter-spacing: 0;
+  line-height: normal;
+  /* position: absolute; */
+  text-align: center;
+  /* top: 590px; */
+  white-space: nowrap;
+}
+
+.LoginPage .noAccount {
+  color: transparent;
+  font-family: "Miltonian Tattoo-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  height: 21px;
+  /* left: 197px; */
+  letter-spacing: 0;
+  line-height: normal;
+  /* position: absolute; */
+  text-align: center;
+  /* top: 637px; */
+  white-space: nowrap;
+}
+
+.LoginPage .span {
+  color: #ffffff;
+}
+
+.LoginPage .hyperlink {
+  color: #0057da;
+  font-family: "Microsoft Sans Serif-Regular", Helvetica;
+}
+
+.LoginPage .copright-footer {
+  height: 35px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.altLogins {
+  /* display: flex; */
+  /* border: 2px solid yellow; */
+  /* gap: 10px; */
+  width: 28rem;
+  /* justify-content: center;
+  align-items: center; */
+  margin: 5px;
+  padding-left: 6rem;
+}
+
+.LoginPage .google-login {
+  height: 59px;
+  /* left: 304px;
+  position: absolute; */
+  /* top: 814px; */
+  width: 247px;
+}
+
+.LoginPage .facebook-login {
+  height: 58px;
+  /* left: 304px;
+  position: absolute;
+  top: 733px; */
+  width: 247px;
+}
+
+.LoginPage .apple-login {
+  height: 58px;
+  /* left: 304px;
+  position: absolute;
+  top: 896px; */
+  width: 247px;
+}
+
+.LoginPage .remember-me-button {
+  display:flex;
+  flex-direction: column;
+  height: 21px;
+  justify-content: space-between;
+  /* left: 197px; */
+  /* position: absolute; */
+  /* top: 529px; */
+  width: 157px;
+  /* border: 2px solid yellow; */
+}
+.leftRemember {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px
+}
+
+.LoginPage .checkbox {
+  background-color: #d9d9d9;
+  height: 17px;
+  width: 19px;
+}
+.rightRemember{
+ /* border: 1px solid yellow; */
+ position: relative;
+}
+
+.LoginPage .text-wrapper-6 {
+  color: #ffffff;
+  font-family: "Miltonian Tattoo-Regular", Helvetica;
+  font-size: 18px;
+  font-weight: 400;
+  height: 21px;
+  /* left: 26px; */
+  letter-spacing: 0;
+  line-height: normal;
+  /* position: absolute; */
+  /* text-align: center; */
+  /* top: 0; */
+  white-space: nowrap;
+}

@@ -10,8 +10,9 @@ export const Navbar = () => {
 
   return (
     <><nav>
-      <Link to="/" className="title">
+      <Link to="/Home" className="title">
         <img src={Logo} alt="logo"/>
+        <p className="hint">(click to go home)</p> {/*get this dang thing to be as you want it...draw in Figma and save as svg if you have to.*/}
       </Link>
       <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>
@@ -19,6 +20,9 @@ export const Navbar = () => {
         <span></span>
       </div>
       <ul className={menuOpen ? "open" : ""}>
+        {/*<li>
+          <NavLink to="/"> Login</NavLink> }
+        </li>*/}
         <li>
           <NavLink to="/Characters">Characters</NavLink>
         </li>

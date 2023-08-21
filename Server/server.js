@@ -17,13 +17,15 @@ const raceRoutes = require("./routes/raceRoutes");
 const spellRoutes = require("./routes/spellRoutes");
 const classRoutes = require("./routes/classRoutes");
 const equipmentRoutes = require("./routes/equipmentRoutes");
+const cors = require('cors')
 
 //comment these lines out if creating a new db. These populate the table row data with premades
 const seedRunner = require("./seeds/seedsController")
 seedRunner.runAllSeeds()
 
-
 app.use(express.json());
+app.use(cors()); //react boots on port 5173 so to tie this in to specifically my frontend use app.use(cors({ origin: 'http://localhost:5173' }));
+
 
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
