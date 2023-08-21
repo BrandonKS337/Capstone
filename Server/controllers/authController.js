@@ -67,6 +67,36 @@ const updatePassword = async (userId, newPassword, res) => {
   }
 };
 
+const loginUserByUsername = (req, res) => {
+  //changed (body, res) here to req,res...body wasnt being used???
+  const unhashedPassword = req.body.password; //changed this aswell from req.data.password to req.body.password....well see if that screws things up
+  const username = req.body.username;
+
+  Models.User.scope("withPassword")
+    .findAll({ where: { username: username } }) //can add in other fields like username or something to double the verification here
+    .then((data) => {
+      if (
+        data &&
+        bcrypt.compareSync(unhashedPassword, data[0].dataValues.password)
+      ) {
+        data[0].dataValues.password = undefined;
+        res
+          .status(200)
+          .send({ success: true, message: "Boom All logged in and good to go", data: data });
+      } else {
+        console.log("Username or password is incorrect");
+
+        res
+          .status(403)
+          .send({ success: false, data: "Wrong username or password!" }); //phrased like this to "throw off" a hacker.. can't immediately identify that one is correct and one is wrong in their hack attempt
+      }
+    })
+    .catch((err) => {
+      console.log("Error:", err);
+      throw err;
+    });
+};
+
 const loginUserByEmail = (req, res) => {
   //changed (body, res) here to req,res...body wasnt being used???
   const unhashedPassword = req.body.password; //changed this aswell from req.data.password to req.body.password....well see if that screws things up
@@ -101,4 +131,5 @@ module.exports = {
   signUpUser,
   loginUserByEmail,
   updatePassword,
+  loginUserByUsername
 };
