@@ -129,10 +129,10 @@ const seedHeroes = async () => {
     const heroes = await Models.Hero.findAll({
       where: 
       {
-        user_id: element.user_id,
+        // user_id: element.user_id,
         hero_name: element.hero_name,
         hero_level: element.hero_level,
-        xp: element.xp,
+        // xp: element.xp,
         race_id: element.race_id,
         class_id: element.class_id,
         background: element.background,
@@ -169,3 +169,8 @@ const seedHeroes = async () => {
 module.exports = {
   seedHeroes,
 };
+
+
+
+
+////test test test
