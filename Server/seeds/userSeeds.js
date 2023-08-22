@@ -57,7 +57,7 @@ const seedUsers = async () => {
         lastName: element.lastName,
         username: element.username,
         email: element.email,
-        password: element.password
+        // password: element.password //don't need this anymore because once password is hashed the query will never match the data
         
       },
       raw: true,
