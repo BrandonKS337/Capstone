@@ -18,6 +18,7 @@ const data = [
     xp: 65452,
     race_id: "dwarf",
     class_id: "warrior",
+    image_url: "https://i.pinimg.com/originals/d5/23/26/d523266cdfcf3bf6d0d4d891fcf44af2.jpg",
     background: "Eldric Fireblade, a legendary hero of fiery origins, emerged from the ashes of his destroyed homeland. He wields a blade imbued with the elemental power of fire, a testament to his fierce determination and mastery of pyromancy. Driven by a burning desire for justice, Eldric Fireblade roams the realms, seeking to quench the flames of tyranny and ignite hope in the hearts of those oppressed.",
   },
   {
@@ -27,6 +28,7 @@ const data = [
     xp: 64896,
     race_id: "human",
     class_id: "rogue",
+    image_url: "https://i.pinimg.com/564x/b6/79/3b/b6793b6d1bb2ad2e42d8439d1cdc8edb.jpg",
     background: "Silvia Moonshadow, a enigmatic and skilled rogue, hails from the secretive realm of the Nightshade Grove. With moonlit eyes and an uncanny ability to blend into the shadows, she navigates the darkness with unparalleled finesse. Silvia's past remains veiled in mystery, her motivations obscured by her enigmatic demeanor. Known for her stealthy prowess and silver-tongued charm, Silvia Moonshadow traverses the realms, unraveling secrets and threading her way through the intricate webs of intrigue.",
   },
   {
@@ -36,6 +38,7 @@ const data = [
     xp: 64896,
     race_id: "elf",
     class_id: "warrior",
+    image_url: "https://i.pinimg.com/564x/3f/67/76/3f67769e67a1d58c0c9c216d5b552ee2.jpg",
     background: "A valiant elven warrior, was born under the gleaming Northern Lights that illuminated her destiny. Raised by a tribe of skilled archers, she mastered the art of precision and agility, earning her the moniker Swiftstrike. With her trusty bow and enchanted arrows, Aurora seeks to protect the realms from encroaching darkness, embodying the radiant spirit of the Aurora that guides her path.",
   },
   {
@@ -45,6 +48,7 @@ const data = [
     xp: 64896,
     race_id: "gnome",
     class_id: "mage",
+    image_url: "https://femto.scrolller.com/gnome-wizard-by-tom-mcgrath-754jtexgzq-540x766.jpg",
     background: "Galen Stormrider, a seasoned sailor and mage, hails from the coastal city of Arcanholm, where turbulent seas and tempestuous magic intertwine. Having survived a shipwreck caused by a magical storm, Galen emerged with newfound command over wind and water. Clad in sea-worn armor, he sails across the arcane currents, seeking ancient secrets and aiding those in need, as the embodiment of nature's fierce and untamed forces.",
   },
   {
@@ -54,6 +58,7 @@ const data = [
     xp: 122545,
     race_id: "tebaxi",
     class_id: "rogue",
+    image_url: "https://i.pinimg.com/564x/98/95/09/989509e1db19e44f2f5efda9e27090c3.jpg",
     background: "Lyra Nightshade, a shadow dancer of the secretive Moonlit Order, was trained in the arts of stealth and subterfuge. Born into nobility, she forsook her privileged life to embrace the darkness that cast its allure upon her. As the Nightshade, Lyra wields twin daggers with lethal grace, prowling the night to thwart evildoers and unveil hidden plots. Her enigmatic past and veiled motives add to the mystique surrounding her vigilante persona.",
   },
   {
@@ -63,6 +68,7 @@ const data = [
     xp: 87500,
     race_id: "elf",
     class_id: "ranger",
+    image_url: "https://i.pinimg.com/564x/74/27/15/742715af22ea62a85027a36e509c10ce.jpg",
     background: "Aria Moonshadow was born under the canopy of the ancient Elven woods. Guided by the whispers of the trees and songs of the stars, she is an unmatched archer. Her arrows fly true, guided by the blessings of the moon and her deep connection to nature. She defends the forests from those who seek to exploit them, and her legend is sung in Elven lullabies.",
     // image_url: "https://yourwebsite.com/path/to/images/aria_moonshadow.jpg"
 
@@ -75,6 +81,7 @@ const data = [
     xp: 101202,
     race_id: "half-orc",
     class_id: "barbarian",
+    image_url: "https://i.pinimg.com/originals/c8/fc/d3/c8fcd3c1fa3da0638199f226519155b0.png",
     background: "Born of both human and orcish blood, Thorgar's strength is only rivaled by his indomitable will. From the frigid, mountainous borders of orc territory, he has faced countless challenges head-on. With a battle axe that has tasted the blood of a hundred foes, he seeks to carve his destiny and find a place where he truly belongs.",
 },
 
@@ -85,6 +92,7 @@ const data = [
     xp: 75650,
     race_id: "halfling",
     class_id: "rogue",
+    image_url: "https://i.pinimg.com/736x/f9/c3/8d/f9c38d2baacf8902bfa1d60c72aaec7e.jpg",
     background: "Liliana, with nimble fingers and even nimbler feet, was once a famed thief of the Halfling Underguild. She now uses her skills in subterfuge and stealth to liberate treasures from tyrants and redistribute to the downtrodden. With a dagger dipped in shadow and a network of informants, she's always one step ahead.",
 },
 
@@ -95,16 +103,18 @@ const data = [
     xp: 120300,
     race_id: "dragonborn",
     class_id: "sorcerer",
+    image_url: "https://cdnb.artstation.com/p/assets/images/images/028/071/797/large/gaston-s-garcia-b7d176d2-a3c4-4a48-95b8-113ab5ed246a.jpg?1593418830",
     background: "Born amidst a tempest, Maelor's draconic heritage is that of the mighty blue dragon. With a roar, he can summon the fury of the storm and with a whisper, he can weave the very energies of magic. Cast out by his clan for his overwhelming power, he travels seeking knowledge and control over his innate arcane abilities.",
 },
 
 {
     user_id: 7,
-    hero_name: "Seraphina Lightbearer",
+    hero_name: "Seraph Lightbearer",
     hero_level: 9,
     xp: 140750,
     race_id: "aasimar",
     class_id: "paladin",
+    image_url:"https://i.etsystatic.com/43204365/r/il/a2ca06/4989636283/il_fullxfull.4989636283_mary.jpg",
     background: "Blessed by the heavens, Seraphina is a beacon of hope in a world consumed by darkness. Her divine lineage grants her formidable powers against the undead and malevolent spirits. With a shield that gleams like the morning sun and a conviction unyielding, she is on a holy quest to vanquish evil and spread the light.",
 },
 
@@ -115,6 +125,7 @@ const data = [
     xp: 50400,
     race_id: "gnome",
     class_id: "wizard",
+    image_url: "https://i.pinimg.com/originals/f7/71/a0/f771a020b772dbb6c4db5fda3c35a9d5.png",
     background: "Glimwick's insatiable curiosity and boundless enthusiasm for arcane knowledge made him a prodigious spellcaster. From the cozy libraries of Gnomeregan to the arcane towers of Netheril, his name is synonymous with magical innovation. Armed with a spellbook full of wonders and a mischievous twinkle in his eye, Glimwick's adventures are just beginning.",
 }
 
