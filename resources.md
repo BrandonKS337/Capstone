@@ -12,7 +12,7 @@ Sylvia Moonshadow:
 AuroraSwiftstrike:
 ``https://i.pinimg.com/564x/3f/67/76/3f67769e67a1d58c0c9c216d5b552ee2.jpg``
 Galen Stormrider:
-
+``https://femto.scrolller.com/gnome-wizard-by-tom-mcgrath-754jtexgzq-540x766.jpg``
 Lyra Nightshade:
 ``https://i.pinimg.com/564x/98/95/09/989509e1db19e44f2f5efda9e27090c3.jpg``
 Aria Moonshadow:

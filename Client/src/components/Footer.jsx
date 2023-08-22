@@ -1,9 +1,21 @@
 import React from "react";
 import { FaDiscord, FaFacebook, FaTwitter, FaComment, FaBell } from "react-icons/fa";
 import { RiLogoutBoxLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom"; // <-- Import this
 import "./styles/Footer.css";
 
 const Footer = () => {
+  const navigate = useNavigate(); // Use the hook to get the navigate function
+
+  const handleLogout = () => {
+    // TODO: Clear any user data, tokens, etc. from local storage, cookies or state
+
+    // TODO: If necessary, make an API call to invalidate session or token
+
+    // Redirect to login page
+    navigate("/");
+  };
+
   return (
     <footer className="footer">
       <div className="left">
@@ -20,7 +32,7 @@ const Footer = () => {
           <FaComment className="icon" />
           <FaBell className="icon" />
         </div>
-        <RiLogoutBoxLine className="logout-icon" />
+        <RiLogoutBoxLine className="logout-icon" onClick={handleLogout} /> {/* Attach the onClick event */}
       </div>
     </footer>
   );
