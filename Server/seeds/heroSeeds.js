@@ -14,8 +14,8 @@ const data = [
   {
     user_id: 2,
     hero_name: "Eldric Fireblade",
-    hero_level: 4,
-    xp: 65452,
+    hero_level: 3,
+    xp: 40225,
     race_id: "dwarf",
     class_id: "warrior",
     image_url: "https://i.pinimg.com/originals/d5/23/26/d523266cdfcf3bf6d0d4d891fcf44af2.jpg",
@@ -34,8 +34,8 @@ const data = [
   {
     user_id: 1,
     hero_name: "Aurora Swiftstrike",
-    hero_level: 4,
-    xp: 64896,
+    hero_level: 7,
+    xp: 6588844,
     race_id: "elf",
     class_id: "warrior",
     image_url: "https://i.pinimg.com/564x/3f/67/76/3f67769e67a1d58c0c9c216d5b552ee2.jpg",
@@ -44,8 +44,8 @@ const data = [
   {
     user_id: 3,
     hero_name: "Galen Stormrider",
-    hero_level: 4,
-    xp: 64896,
+    hero_level: 16,
+    xp: 136546841,
     race_id: "gnome",
     class_id: "mage",
     image_url: "https://femto.scrolller.com/gnome-wizard-by-tom-mcgrath-754jtexgzq-540x766.jpg",

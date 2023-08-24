@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../styles/Login.css"; // Path to your styles folder
 import { useNavigate } from "react-router-dom";
+import SignupPage from "../overlays/SignupPage"
 
 export const Login = () => {
   //set up use state effects for taking userName/password/remember so that the data can be transferred
@@ -10,7 +11,13 @@ export const Login = () => {
   const [password, setPassword] = useState(""); //holds the password input
   const [rememberMe, setRememberMe] = useState(false); //holds the remember me state//not used just yet
   const [errorMessage, setErrorMessage] = useState(""); //just setting this to help with displaying any error messages
+  const [showOverlay, setShowOverlay] = useState(false)
   const navigate = useNavigate(); // setting this so that can push a user from root to dashboard on successfully verified login attempts automatically
+
+  const toggleOverlay = () => {
+    setShowOverlay(!showOverlay)
+  }
+
 
   const handleLogin = async () => {
     try {
@@ -96,7 +103,9 @@ export const Login = () => {
                     <span className="span">
                       Don’t have an Account?&nbsp;&nbsp;
                     </span>
-                    <span className="hyperlink">Create new</span>
+                    {/* <span className="hyperlink">Create new</span> */}
+                    <button onClick={toggleOverlay}> Create Account</button>
+                    {showOverlay && <SignupPage onClose={toggleOverlay}/>}
                   </p>
                   <div className="altLogins">
                     
