@@ -72,6 +72,15 @@ User.init(
       allowNull: true,
       // required: true,
     },
+    profileImage: {
+      type: DataTypes.BLOB,
+      allowNull: true
+    },
+    aboutMe: {
+      type: DataTypes.TEXT,
+      allowNull: true
+    }
+    
   },
   {
     sequelize: sequelizeInstance, //these several lines create "options"

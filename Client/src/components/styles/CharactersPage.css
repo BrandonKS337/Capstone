@@ -8,8 +8,8 @@
   bottom: 0; /* Extend to the bottom end of the viewport */
   padding: 30px;
   font-family: sans-serif;
-  /* background-color: #2b2b2b; */
-  background-image: url("./src/components/assets/tabletop.png");
+  background-color: #2b2b2b;
+  /* background-image: url("./src/components/assets/tabletop.png"); */
   background-size: cover;
   color: white;
   overflow: auto; /* Allow internal scrolling if the content overflows */
@@ -183,7 +183,7 @@ h3 {
 
 .card-back {
   transform: rotateY(180deg);
-  background-color: #4e4c4c;
+  background-color: #817d7d;
   color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 10);
   border-radius: 5px;
@@ -194,6 +194,7 @@ h3 {
   text-align: left;
   overflow: hidden;
   transition: transform 0.5s, opacity 0.5s;
+  /* text-transform:capitalize; */
 }
 .back-top-half {
   display: flex;
@@ -260,4 +261,27 @@ h3 {
   margin-top: 0;
   font-size: 1.2rem;
   color: goldenrod;
+}
+
+.edit-delete-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.edit-button, .delete-button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.delete-button {
+  background-color: #f44336; 
+  color: white;
 }

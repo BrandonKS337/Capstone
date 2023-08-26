@@ -2,8 +2,9 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Navbar } from "./components/Navbar";
-import { Characters, BattlePit, Dashboard, Library, AdventurersDen, Login } from "./components/pages";
+import { Characters, BattlePit, Dashboard, Library, AdventurersDen, Login} from "./components/pages";
 import Footer from "./components/Footer";
+import Profile from "./components/pages/Profile";
 
 function App() {
   return (
@@ -47,6 +48,13 @@ function App() {
           <>
             <Navbar />
             <AdventurersDen />
+            <Footer />
+          </>
+        } />
+        <Route path="/Profile" element={
+          <>
+            <Navbar />
+            <Profile />
             <Footer />
           </>
         } />

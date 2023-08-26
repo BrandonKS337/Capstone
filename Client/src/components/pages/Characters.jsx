@@ -38,6 +38,25 @@ export const Characters = () => {
     }));
   };
 
+  const deleteCharacter = async (hero_id) => {
+    try {
+      const response = await fetch(`http://localhost:8000/api/heroes/${hero_id}`, {
+        method: 'DELETE'
+      });
+      if (response.status !== 200) {
+        const errorData = await response.json();
+        console.error('Error deleting character: ', errorData.message)
+        return
+      }
+
+      //if that works filter out deleted hero from the array
+      const updatedCharacters = characters.filter(character => character.hero_id !==hero_id);
+      setCharacters(updatedCharacters)
+    } catch (error) {
+      console.error('Error deleting character: ', error)
+    }
+  }
+
   const filteredCharacters = characters.filter((character) =>
     character.hero_name.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -89,6 +108,13 @@ export const Characters = () => {
                 <div className="background">
                   <p>{character.background}</p>
                 </div>
+                <div className="edit-delete-buttons">
+                  <button className="edit-button">Edit</button>
+                  <button className="delete-button" onClick={(e) => {
+                    e.stopPropagation(); //this keeps the card from flipping
+                    deleteCharacter(character.hero_id)
+                  }}>Delete</button>
+                  </div>
               </div>
             </div>
           </div>
