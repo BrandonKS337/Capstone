@@ -1,48 +1,74 @@
 import React from "react";
 import "../styles/SignupPage.css"; // import your CSS file
 
-export const SignupPage = ({ overlapClassName, appleSvgClassName, divClassName }) => {
-    return (
-      <div className="create-account">
-        <div className="text-wrapper">Create Account</div>
-      <div className="user-name-input">
-        <div className="overlap-group">
-          <div className="div">User Name</div>
-          <img
-            className="healthicons-ui-user"
-            alt="Healthicons ui user"
-            src="healthicons-ui-user-profile-outline.svg"
-          />
+export const SignupPage = ({divClassName}) => {
+  return (
+    <div className="create-account">
+      <div className="Title">Create Account</div>
+      <div className="user-input">
+        <div className="input-box">
+          <input className="input" type="text" placeholder="First Name" />
+        </div>
+        <div className="input-box">
+          <input className="input" type="text" placeholder="Last Name" />
+        </div>
+        <div className="input-box">
+          <input className="input" type="text" placeholder="Username" />
+        </div>
+        <div className="input-box">
+          <input className="input" type="email" placeholder="Email" />
+        </div>
+        <div className="input-box">
+          <input className="input" type="password" placeholder="Password" />
         </div>
       </div>
-      <img className="user-email-input" alt="User email input" src="user-email-input.png" />
-      <img className="user-password-input" alt="User password input" src="user-password-input.png" />
+
       <button className="login-button">
-        <div className="overlap">
+        <div className="submit-button">
           <div className="text-wrapper-2">Submit</div>
         </div>
       </button>
-      <div className="google-login">
-        <div className="overlap-2">
-          <img className="img" alt="Google svg" src="google-svg.svg" />
-          <div className="text-wrapper-3">Sign in with Google</div>
+      <img
+        className="or-divider"
+        alt="Or divider"
+        src="./src/components/assets/altloginbuttons/RedOrDivider.svg"
+      />
+      <div className="alt-buttons">
+        <div className="google-login">
+          <div className="google-button">
+            <img
+              className="img"
+              alt="Google svg"
+              src="./src/components/assets/altloginbuttons/Google.svg"
+            />
+            <div className="text-wrapper-3">Sign in with Google</div>
+          </div>
+        </div>
+        <div className="facebook-login">
+          <div className="facebook-button">
+            <div className="text-wrapper-4">Log in with Facebook</div>
+            <img
+              className="img"
+              alt="Facebook svg"
+              src="./src/components/assets/altloginbuttons/Facebook.svg"
+            />
+          </div>
+        </div>
+        <div className="apple-login">
+          <div className="apple-button">
+            <div className={`text-wrapper-5 ${divClassName}`}>
+              Continue with Apple
+            </div>
+            <img
+              className="img"
+              alt="Apple Logo"
+              src="./src/components/assets/altloginbuttons/Apple.svg"
+            />
+          </div>
         </div>
       </div>
-      <div className="facebook-login">
-        <div className="overlap-3">
-          <div className="text-wrapper-4">Log in with Google</div>
-          <img className="img" alt="Facebook svg" src="facebook-svg.svg" />
-        </div>
-      </div>
-      <div className="apple-login">
-        <div className={`overlap-4 ${overlapClassName}`}>
-          <img className={`apple-svg ${appleSvgClassName}`} alt="Apple svg" src="apple-svg.svg" />
-          <div className={`text-wrapper-5 ${divClassName}`}>Continue with Apple</div>
-        </div>
-      </div>
-      <img className="or-divider" alt="Or divider" src="or-divider.svg" />
-      </div>
-    );
-  };
+    </div>
+  );
+};
 
-  export default SignupPage
+export default SignupPage;

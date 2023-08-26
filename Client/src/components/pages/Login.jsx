@@ -97,7 +97,7 @@ export const Login = () => {
                   <img
                     className="altLoginBreaker"
                     alt="Or divider"
-                    src="./src/components/assets/altloginbuttons/Or Divider.svg"
+                    src="./src/components/assets/altloginbuttons/OrDivider.svg"
                   />
                   <p className="noAccount">
                     <span className="span">

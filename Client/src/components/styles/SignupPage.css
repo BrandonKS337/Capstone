@@ -1,60 +1,86 @@
-
+* {
+  color: black;
+}
 .create-account {
   background-color: #ffffff;
   border: 1rem solid black;
   border-radius: 45px;
-  height: 750px;
+  height: 700px;
   position: absolute;
-  top: -20rem;
-  left: 50%;
+  top: -18rem;
+  left: 12vw;
   width: 700px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 15px;
+  /* border: 4px solid rgb(73, 221, 19); */
 }
 
-.create-account .text-wrapper {
+.create-account .Title {
   color: #000000;
   font-family: "Miltonian Tattoo-Regular", Helvetica;
   font-size: 36px;
   font-weight: 400;
-  height: 43px;
-  left: 210px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 54px;
-  white-space: nowrap;
+  height: fit-content;
+  margin-top: 1rem;
+  /* height: 43px; */
+  /* left: 210px; */
+  /* letter-spacing: 0; */
+  /* line-height: normal; */
+  /* position: absolute; */
+  /* text-align: center; */
+  /* top: 1rem; */
+  /* white-space: nowrap; */
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  /* border: 4px solid rgb(61, 18, 235); */
 }
 
-.create-account .user-name-input {
-  height: 85px;
+.create-account .user-input {
+  height: fit-content;
   left: 51px;
-  position: absolute;
-  top: 131px;
+  /* position: absolute; */
+  /* top: 3rem; */
   width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  /* border: 1px solid red; */
 }
 
-.create-account .overlap-group {
+.create-account .input-box {
   background-color: #9b4646bd;
   border-radius: 45px;
-  box-shadow: inset 16px 16px 16px #00000073;
-  height: 85px;
+  box-shadow: inset 16px 16px 8px #00000073;
+  height: 4rem;
   position: relative;
-  width: 598px;
+  width: 100%;
+  color: black;
+  /* margin-top; */
 }
 
-.create-account .div {
-  color: #ffffff;
+.create-account .input {
+  /* color: #ffffff; */
   font-family: "Miltonian Tattoo-Regular", Helvetica;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 30px;
   font-weight: 400;
-  height: 36px;
+  height: 4rem;
   left: 78px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 25px;
+  /* top: 25px; */
   white-space: nowrap;
+  /* border: 1px solid rgb(0, 131, 254); */
 }
 
 .create-account .healthicons-ui-user {
@@ -75,24 +101,28 @@
 
 .create-account .user-password-input {
   height: 86px;
-  left: 51px;
-  position: absolute;
-  top: 345px;
+  /* left: 51px; */
+  /* position: absolute; */
+  /* top: 345px; */
   width: 598px;
 }
 
 .create-account .login-button {
   all: unset;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   height: 49px;
-  left: 242px;
-  position: absolute;
-  top: 472px;
+  /* left: 242px; */
+  /* position: absolute; */
+  /* top: 472px; */
   width: 218px;
 }
 
-.create-account .overlap {
-  background: linear-gradient(180deg, rgb(57.37, 10.28, 10.28) 4.23%, rgba(251.81, 0, 0, 0.62) 100%);
+.create-account .submit-button {
+  background: linear-gradient(
+    180deg,
+    rgb(57.37, 10.28, 10.28) 4.23%,
+    rgba(251.81, 0, 0, 0.62) 100%
+  );
   border: 1px solid;
   border-color: #000000;
   border-radius: 20px;
@@ -116,18 +146,26 @@
   top: 9px;
 }
 
+.alt-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 95%;
+  margin-top: 1rem;
+  /* border: 2px solid orangered; */
+
+}
+
 .create-account .google-login {
   height: 48px;
-  left: 249px;
-  position: absolute;
-  top: 634px;
+  /* left: 249px; */
+  /* position: absolute; */
+  /* top: 634px; */
   width: 205px;
 }
 
-.create-account .overlap-2 {
+.create-account .google-button {
   background-color: #ffffff;
-  border: 1px solid;
-  border-color: #000000;
+  border: 1px solid black;
   border-radius: 20px;
   height: 48px;
   position: relative;
@@ -159,16 +197,15 @@
 
 .create-account .facebook-login {
   height: 47px;
-  left: 28px;
-  position: absolute;
-  top: 635px;
+  /* left: 28px; */
+  /* position: absolute; */
+  /* top: 635px; */
   width: 205px;
 }
 
-.create-account .overlap-3 {
+.create-account .facebook-button {
   background-color: #1877f2;
-  border: 1px solid;
-  border-color: #313ca1;
+  border: 1px solid #313ca1;
   border-radius: 20px;
   height: 47px;
   position: relative;
@@ -192,16 +229,15 @@
 
 .create-account .apple-login {
   height: 47px;
-  left: 470px;
-  position: absolute;
-  top: 634px;
+  /* left: 470px; */
+  /* position: absolute; */
+  /* top: 634px; */
   width: 205px;
 }
 
-.create-account .overlap-4 {
+.create-account .apple-button {
   background-color: #000000;
-  border: 1px solid;
-  border-color: #000000;
+  border: 1px solid black;
   border-radius: 20px;
   height: 47px;
   position: relative;
@@ -210,9 +246,9 @@
 
 .create-account .apple-svg {
   height: 35px;
-  left: 6px;
+  /* left: 6px; */
   position: absolute;
-  top: 3px;
+  /* top: 3px; */
   width: 30px;
 }
 
@@ -232,9 +268,11 @@
 }
 
 .create-account .or-divider {
-  height: 29px;
-  left: 124px;
-  position: absolute;
-  top: 563px;
+  height: 40px;
+  /* left: 124px; */
+  /* position: absolute; */
+  /* top: 563px; */
   width: 452px;
+  /* border: 10px solid red; */
+  /* color: black; */
 }
