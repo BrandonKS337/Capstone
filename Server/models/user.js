@@ -35,6 +35,7 @@ User.init(
       allowNull: false,
       required: true,
       primaryKey: true,
+      unique: true
 
     },
     email: {

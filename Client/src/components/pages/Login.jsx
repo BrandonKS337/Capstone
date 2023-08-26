@@ -105,8 +105,9 @@ export const Login = () => {
                     </span>
                     {/* <span className="hyperlink">Create new</span> */}
                     <button onClick={toggleOverlay}> Create Account</button>
-                    {showOverlay && <SignupPage onClose={toggleOverlay}/>}
                   </p>
+                  {showOverlay && <SignupPage onClose={toggleOverlay}/>}
+
                   <div className="altLogins">
                     
                       <img
