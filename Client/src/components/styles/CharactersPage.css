@@ -90,7 +90,7 @@ button:hover {
 }
 
 .character-card {
-  perspective: 1500px; /* Adjust this value for a deeper 3D effect */
+  perspective: 1500px; /* Adjust this value for a "deeper" 3D effect */
   width: 250px;
   height: 350px;
   /* background: #4e4e4e; */
@@ -280,6 +280,20 @@ h3 {
   background-color: #4CAF50;
   color: white;
 }
+
+/* trying to get the "edit" stuff lined up after the state change */
+.edit-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-section input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
+
 
 .delete-button {
   background-color: #f44336; 

@@ -10,14 +10,14 @@ function Profile() {
 
   // Handle the update profile button click
   const handleUpdateProfile = async () => {
-    const id = "YOUR_USER_ID"; // You should fetch or determine this value from context or another state.
+    const id = user.id; // Not sure about this.....pretty sure this part is whats screwingme up
 
     const data = {
       first_name: firstName,
       last_name: lastName,
       username: username,
       email: email,
-      about_me: aboutMe,
+      aboutMe: aboutMe,
     };
 
     try {

@@ -57,4 +57,9 @@
     height: 2rem;
     width: 6rem;
   }
+
+  .submit-button {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
   
