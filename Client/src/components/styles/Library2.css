@@ -1,0 +1,190 @@
+.frame {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid red;
+  }
+  
+  .frame .overlap-wrapper {
+    background-color: #ffffff;
+    height: 100%;
+    /* overflow: hidden; */
+    width: 100%;
+    border: 1px solid blue;
+
+    
+  }
+  
+  .frame .overlap {
+    height: fit-content;
+    position: relative;
+
+  }
+  
+  .frame .old-grunge-dark {
+    /* height: 100%; */
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  
+  .frame .div {
+    align-items: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 21px;
+    left: 57px;
+    position: absolute;
+    top: 237px;
+    padding-bottom: 4rem;
+  }
+  
+  .frame .create-character {
+    height: 77px;
+    margin-right: -12px;
+    position: relative;
+    width: 177px;
+  }
+  
+  .frame .img {
+    height: 77px;
+    margin-bottom: -12px;
+    margin-right: -12px;
+    position: relative;
+    width: 177px;
+  }
+  
+  .frame .div-2 {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: 63px;
+    left: 53px;
+    position: absolute;
+    top: 41px;
+  }
+  
+  .frame .div-3 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+  }
+  
+  .frame .text-wrapper {
+    color: #e3dfdf;
+    font-family: "Miltonian Tattoo-Regular", Helvetica;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .frame .search-bar {
+    height: 68px;
+    margin-right: -4px;
+    position: relative;
+    width: 868.57px;
+  }
+  
+  .frame .overlap-group {
+    height: 68px;
+    position: relative;
+    width: 865px;
+  }
+  
+  .frame .rectangle {
+    background-color: #ffffff;
+    border: 2px solid;
+    border-color: #a0a0a0;
+    box-shadow: 0px 4px 4px #00000040;
+    height: 57px;
+    left: 0;
+    position: absolute;
+    top: 11px;
+    width: 865px;
+  }
+  
+  .frame .vector {
+    height: 13px;
+    left: 31px;
+    position: absolute;
+    top: 42px;
+    width: 12px;
+  }
+  
+  .frame .text-wrapper-2 {
+    color: #000000;
+    font-family: "Sunshiney-Regular", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    height: 24px;
+    left: 27px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 43px;
+  }
+  
+  .frame .p {
+    color: #9e9b9b;
+    font-family: "Miltonian Tattoo-Regular", Helvetica;
+    font-size: 12px;
+    font-weight: 400;
+    height: 21px;
+    left: 57px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 29px;
+    width: 312px;
+  }
+  
+  .frame .ellipse {
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #000000;
+    border-radius: 10.06px/9.03px;
+    height: 18px;
+    left: 17px;
+    position: absolute;
+    top: 30px;
+    width: 20px;
+  }
+  
+  .frame .text-wrapper-3 {
+    color: #e3dfdf;
+    font-family: "Miltonian Tattoo-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    height: 135px;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1px;
+    position: relative;
+    text-align: center;
+    width: 407px;
+  }
+  
+  .frame .rectangle-2 {
+    background-color: #ffffff;
+    height: 820px;
+    left: 274px;
+    position: absolute;
+    top: 237px;
+    width: 1114px;
+  }
+  
