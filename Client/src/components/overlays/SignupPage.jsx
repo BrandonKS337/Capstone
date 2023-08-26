@@ -36,7 +36,7 @@ export const SignupPage = ({ onClose }) => {
       if (response.ok) {
         setStatusMessage("Success");
         setTimeout(() => {
-          onClose()
+          onClose();
         }, 1000);
       } else {
         setErrorMessage(data.message);
@@ -54,109 +54,107 @@ export const SignupPage = ({ onClose }) => {
   };
 
   return (
-    <div className="create-account">
-      <button className="cancel-button" onClick={onClose}>X</button>
-      <div className="Title">Create Account</div>
-      <div className="user-input">
-        <div className="input-box">
-          <input
-            className="input"
-            type="text"
-            placeholder="First Name"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            maxLength="15"
-          />
-        </div>
-        <div className="input-box">
-          <input
-            className="input"
-            type="text"
-            placeholder="Last Name"
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            maxLength="15"
-
-          />
-        </div>
-        <div className="input-box">
-          <input
-            className="input"
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            maxLength="15"
-
-          />
-        </div>
-        <div className="input-box">
-          <input
-            className="input"
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            maxLength="25"
-
-          />
-        </div>
-        <div className="input-box">
-          <input
-            className="input"
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            maxLength="15"
-
-          />
-        </div>
-      </div>
-
-      <button type="submit" className="login-button" onClick={handleSignup}>
-        <div className="submit-button">
-          <div className="text-wrapper-2">{statusMessage}</div>
-        </div>
-      </button>
-      {errorMessage && <div className="error-message">{errorMessage}</div>}
-
-      <img
-        className="or-divider"
-        alt="Or divider"
-        src="./src/components/assets/altloginbuttons/RedOrDivider.svg"
-      />
-      <div className="alt-buttons">
-        <div className="google-login">
-          <div className="google-button">
-            <img
-              className="img"
-              alt="Google svg"
-              src="./src/components/assets/altloginbuttons/Google.svg"
+    <div className="overlay">
+      <div className="create-account">
+        <button className="cancel-button" onClick={onClose}>
+          X
+        </button>
+        <div className="Title">Create Account</div>
+        <div className="user-input">
+          <div className="input-box">
+            <input
+              className="input"
+              type="text"
+              placeholder="First Name"
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              maxLength="15"
             />
-            <div className="text-wrapper-3">Sign in with Google</div>
           </div>
-        </div>
-        <div className="facebook-login">
-          <div className="facebook-button">
-            <div className="text-wrapper-4">Log in with Facebook</div>
-            <img
-              className="img"
-              alt="Facebook svg"
-              src="./src/components/assets/altloginbuttons/Facebook.svg"
+          <div className="input-box">
+            <input
+              className="input"
+              type="text"
+              placeholder="Last Name"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              maxLength="15"
+            />
+          </div>
+          <div className="input-box">
+            <input
+              className="input"
+              type="text"
+              placeholder="Username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              maxLength="15"
+            />
+          </div>
+          <div className="input-box">
+            <input
+              className="input"
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              maxLength="25"
+            />
+          </div>
+          <div className="input-box">
+            <input
+              className="input"
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              maxLength="15"
             />
           </div>
         </div>
-        <div className="apple-login">
-          <div className="apple-button">
-            <div className="text-wrapper-5">
-              Continue with Apple
+
+        <button type="submit" className="login-button" onClick={handleSignup}>
+          <div className="submit-button">
+            <div className="text-wrapper-2">{statusMessage}</div>
+          </div>
+        </button>
+        {errorMessage && <div className="error-message">{errorMessage}</div>}
+
+        <img
+          className="or-divider"
+          alt="Or divider"
+          src="./src/components/assets/altloginbuttons/RedOrDivider.svg"
+        />
+        <div className="alt-buttons">
+          <div className="google-login">
+            <div className="google-button">
+              <img
+                className="img"
+                alt="Google svg"
+                src="./src/components/assets/altloginbuttons/Google.svg"
+              />
+              <div className="text-wrapper-3">Sign in with Google</div>
             </div>
-            <img
-              className="img"
-              alt="Apple Logo"
-              src="./src/components/assets/altloginbuttons/Apple.svg"
-            />
+          </div>
+          <div className="facebook-login">
+            <div className="facebook-button">
+              <div className="text-wrapper-4">Log in with Facebook</div>
+              <img
+                className="img"
+                alt="Facebook svg"
+                src="./src/components/assets/altloginbuttons/Facebook.svg"
+              />
+            </div>
+          </div>
+          <div className="apple-login">
+            <div className="apple-button">
+              <div className="text-wrapper-5">Continue with Apple</div>
+              <img
+                className="img"
+                alt="Apple Logo"
+                src="./src/components/assets/altloginbuttons/Apple.svg"
+              />
+            </div>
           </div>
         </div>
       </div>
