@@ -93,17 +93,67 @@ Hero.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
+    STR: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    DEX: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    CON: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    INT: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    WIS: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    CHA: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    save_STR: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    save_DEX: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    save_CON: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    save_INT: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    save_WIS: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    save_CHA: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    passive_Perception: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    passive_Investigation: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    passive_Insight: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    }
 
-    // created_at: {
-    //   type: DataTypes.DATE,
-    //   allowNull: false,
-    //   defaultValue: DataTypes.NOW,
-    // },
-    // updated_at: {
-    //   type: DataTypes.DATE,
-    //   allowNull: false,
-    //   defaultValue: DataTypes.NOW,
-    // },
   },
   {
     sequelize: sequelizeInstance,
@@ -115,7 +165,7 @@ Hero.init(
 
 module.exports = Hero;
 
-//if I end up storing image elsewhere can use this instade of image
+//if I end up storing image elsewhere can use this instead of image
 // imageUrl: {
 //   type: DataTypes.STRING,
 //   allowNull: true,
