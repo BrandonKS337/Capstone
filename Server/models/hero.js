@@ -33,7 +33,7 @@ Hero.init(
       allowNull: false,
     },
     xp: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.BIGINT,
       allowNull: true,
     },
     // race_id: {
