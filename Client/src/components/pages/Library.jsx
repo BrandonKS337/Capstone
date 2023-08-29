@@ -11,7 +11,6 @@ export const Library = () => {
         </div>
         <div className="top-right">
           <p>
-            {" "}
             Please feel free to click one of the available filter buttons and
             then further filter the content with the search bar afterwards
           </p>
@@ -29,167 +28,78 @@ export const Library = () => {
         {/* include the two containers left and right aka nav bar/content */}
         <div className="bottomLeft">
           {/* include all of the quick filter buttons */}
-          <div className="div">
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+          <div className="buttons-container">
+            <button className="filter-button">
+              <div className="button">Ability Scores</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Alignments</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Backgrounds</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Classes</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Conditions</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Damage Types</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Equipment</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Equipment Categories</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Feats</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Features</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Languages</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Magic Items</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Magic Schools</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Monsters</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Proficiencies</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Races</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Rule Sections</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Rules</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Skills</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Spells</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Subclasses</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Subraces</div>
             </button>
-            <button
-              className="filter-button"
-              alt="Create character"
-              src="./src/components/assets/LibraryMaterials/Create Character Button.svg"
-            >
-              <div className="button">Ability-Scores</div>
+            <button className="filter-button">
+              <div className="button">Traits</div>
+            </button>
+            <button className="filter-button">
+              <div className="button">Weapon Properties</div>
             </button>
           </div>
         </div>

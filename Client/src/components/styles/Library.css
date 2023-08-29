@@ -12,7 +12,7 @@
   left: 0;
   display: flex;
   flex-direction: column;
-  border: 2px solid purple;
+  /* border: 2px solid purple; */
 }
 
 .top {
@@ -20,12 +20,12 @@
   justify-content: space-between;
   margin-top: 3rem;
   margin-bottom: 2rem;
-  margin-left: 1rem; 
-  margin-right: 1rem
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .top-left {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 .top-left h1,
 p {
@@ -33,7 +33,7 @@ p {
 }
 
 .top-right {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   width: 30%;
 }
 
@@ -42,7 +42,7 @@ p {
   padding-left: 1rem;
   padding-right: 1rem;
   /* padding: 1rem; */
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
 }
 .theBar {
   width: 100%;
@@ -65,17 +65,40 @@ p {
   /* border: 1px solid green; */
   display: flex;
   flex-direction: column;
-  max-height: 35rem;
+  max-height: 34rem;
   overflow-y: scroll; /* Only vertical scroll */
   overflow-x: hidden; /* Hide horizontal scroll */
   padding-top: 1rem;
   padding-right: 1.8rem;
   padding-bottom: 1rem;
   direction: rtl;
+  /* border: 2px solid purple; */
+}
+.bottomLeft .buttons-container {
+  color: white;
+}
+.bottomLeft button {
+  background: rgb(223, 25, 25);
+  color: white;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.bottomLeft button:hover {
+  background: rgb(193, 0, 0); /* changes on hover color*/
+  box-shadow: 0, 4px 8px rgba(0, 0, 0, 0.2);
+}
+.bottomLeft button:active {
+  background: reg(173, 0, 0); /* changes onClick color*/
+  box-shadow: inset 0px 0px 12px rgba(0, 0, 0, 1);
+}
+
+.button {
+  color: white;
+  font-size: larger;
 }
 
 .bottomLeft::-webkit-scrollbar {
-  width: 10px; /* Width of the scrollbar */
+  width: 20px; /* Width of the scrollbar */
   border-radius: 20px;
 }
 
@@ -87,6 +110,7 @@ p {
 .bottomLeft::-webkit-scrollbar-thumb {
   background: #888; /* Color of the scrollbar thumb */
   border-radius: 10px; /* Rounded corners of the thumb */
+  height: 10px;
 }
 
 .bottomLeft::-webkit-scrollbar-thumb:hover {
