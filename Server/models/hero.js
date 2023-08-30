@@ -93,6 +93,21 @@ Hero.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
+    AC: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    Movement: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    Proficiency: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    Initiative: {
+      type: DataTypes.INTEGER
+    },
     STR: {
       type: DataTypes.INTEGER,
       allowNull: true

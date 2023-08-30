@@ -13,7 +13,6 @@
   background-size: cover;
   color: white;
   overflow: auto; /* Allow internal scrolling if the content overflows */
-  
 }
 
 .top-area {
@@ -101,8 +100,7 @@ button:hover {
   transform-origin: center;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  transition: transform 0.5s, box-shadow 0.3s
-
+  transition: transform 0.5s, box-shadow 0.3s;
 
   /* box-shadow: 0 0 5px rgba(205, 10, 10, 1); */
 }
@@ -137,7 +135,6 @@ button:hover {
   color: white;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
-
 }
 
 .hero-image {
@@ -159,7 +156,8 @@ button:hover {
   justify-content: space-between;
   padding: 20px;
   background-color: rgb(155, 155, 155);
-  color: black
+  color: black;
+  overflow: scroll;
 }
 
 .card-front img {
@@ -177,13 +175,18 @@ h3 {
   bottom: 1rem;
   margin: 0;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.5); /*Adds a semi-transparent background to the text for better readability */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /*Adds a semi-transparent background to the text for better readability */
   border-radius: 10px;
 }
 
 .card-back {
   transform: rotateY(180deg);
-  background-color: #817d7d;
+  background-color: #616060;
   color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 10);
   border-radius: 5px;
@@ -192,16 +195,32 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   text-align: left;
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
   transition: transform 0.5s, opacity 0.5s;
-  /* text-transform:capitalize; */
 }
+.card-back input {
+  width: 100%;
+  height: 1.5rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card-back::-webkit-scrollbar {
+  width: 2px;
+}
+
+.card-back::-webkit-scrollbar-thumb {
+  background-color: goldenrod;
+  border-radius: 4px;
+}
+
 .back-top-half {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 10px 20px; /* Add some padding for spacing */
+  padding: 10px 20px;
   margin-bottom: 1.59em;
 }
 
@@ -209,15 +228,16 @@ h3 {
   width: 50px;
   height: 50px;
   background-color: darkred;
-  border-radius: 50%;
+  border-radius: 25%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
   font-weight: bold;
   /* margin-left: auto; */
+  margin-top: 5px;
   position: absolute;
-  top: 1rem;
+  top: 5px;
   right: 1rem;
 }
 
@@ -235,19 +255,66 @@ h3 {
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   font-size: 0.9rem;
+  /* border: 1px solid green; */
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-direction: row;
 }
 .stats p {
   margin: 0;
 }
+.quick-stats-container {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  width: 118%;
+  flex-wrap: wrap;
+}
+.quick-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: red;
+  height: 3rem;
+  width: 3.6rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.bordered-box .quick-stats {
+  width: 4rem;
+  gap: 5px;
+  text-transform: capitalize;
+}
+
+.words {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+}
 
 .background {
   width: 110%;
-  height: 60%;
-  overflow-y: auto;
+  max-height: 15rem;
+  /* height: fit-content; */
+  overflow-y: scroll;
   /* border: 1px solid #5e5e5e; */
-  padding: 5px;
+  /* padding: 5px; */
   font-size: 0.8rem;
 }
+
+.background textarea {
+  width: 100%;
+  height: 8rem;
+  border: 1px solid #ccc;
+  /* word-wrap: break-word; */
+  resize: none;
+  overflow: inherit;
+  padding: 2px;
+}
+
 .background::-webkit-scrollbar {
   width: 8px;
 }
@@ -269,7 +336,8 @@ h3 {
   margin-top: 10px;
 }
 
-.edit-button, .delete-button {
+.edit-button,
+.delete-button {
   padding: 5px 15px;
   border: none;
   border-radius: 5px;
@@ -277,25 +345,87 @@ h3 {
 }
 
 .edit-button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
 /* trying to get the "edit" stuff lined up after the state change */
 .edit-section {
   display: flex;
-  flex-direction: column;
-}
-
-.edit-section input {
+  /* flex-direction: column; */
   width: 100%;
-  box-sizing: border-box;
-  border: 1px solid red;
+  /* text-transform:capitalize; */
 }
-
-
 
 .delete-button {
-  background-color: #f44336; 
+  background-color: #f44336;
   color: white;
+}
+
+.bordered-box {
+  position: relative;
+  border: 1px solid rgb(165, 160, 160);
+  padding: 1rem 0 0 0;
+  margin: 0 -6px 0 -6px;
+  width: 110%;
+  height: fit-content;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background-color: #817d7d;
+  padding: 1px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: none;
+}
+.passive-stats-container {
+  width: 110%;
+  /* border: 1px solid yellow; */
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pasv-stats {
+  display: flex;
+  border: 1px solid rgb(40, 41, 40);
+  background: #b3b1b1;
+  font-size: 12px;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  height: 2rem;
+  border-radius: 10px;
+}
+.pasv-stats p {
+  border: 4px solid rgb(47, 47, 60);
+  border-radius: 50px;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -4px;
+}
+.pasv-stats input {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  text-align: center;
 }
