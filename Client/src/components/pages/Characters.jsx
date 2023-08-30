@@ -140,8 +140,9 @@ export const Characters = () => {
           return (
             <div
               key={character.hero_id}
-              className={`character-card ${flippedCards[character.hero_id] ? "flipped" : ""
-                }`}
+              className={`character-card ${
+                flippedCards[character.hero_id] ? "flipped" : ""
+              }`}
               onClick={() =>
                 handleCardClick(character.hero_id, isCurrentCardEditing)
               }
@@ -184,7 +185,8 @@ export const Characters = () => {
                         />
                       ) : (
                         character.hero_level
-                      )}</div>
+                      )}
+                    </div>
                   </div>
                   <div className="stats edit-section">
                     <p>
@@ -591,7 +593,9 @@ export const Characters = () => {
                           character.passive_Investigation
                         )}
                       </p>
-                      <div className="pasv-name">Passive INT (INVESTIGATION):</div>
+                      <div className="pasv-name">
+                        Passive INT (INVESTIGATION):
+                      </div>
                     </div>
                     <div className="pasv-stats">
                       <p>

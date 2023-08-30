@@ -82,7 +82,8 @@ button:hover {
   justify-content: center;
   position: absolute;
   top: 18rem;
-  overflow-y: auto;
+  overflow: hidden;
+  /* overflow-y: auto; */
   /* background-color: #2b2b2b; */
   padding-bottom: 5rem;
   padding-top: 10px;
