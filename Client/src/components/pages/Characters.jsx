@@ -244,7 +244,7 @@ export const Characters = () => {
                     </p>
                   </div>
                   <div className="quick-stats-container">
-                    <div className="quick-stats">
+                  <div className="quick-stats">
                       <p>
                         {isCurrentCardEditing ? (
                           <input
@@ -260,7 +260,7 @@ export const Characters = () => {
                           character.Proficiency
                         )}
                       </p>
-                      <div className="words">Prof Bonus:</div>
+                      <div className="words">Proficiency:</div>
                     </div>
                     <div className="quick-stats">
                       <p>

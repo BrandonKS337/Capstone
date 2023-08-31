@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/CreateCharacterOverlay.css"; // import your CSS file
 import axios from "axios";
+import defaultImage from "../assets/image_placeholder.jpg";
 
 const CreateCharacterOverlay = ({ onClose }) => {
   const [characterInfo, setCharacterInfo] = useState({
@@ -9,6 +10,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
     race_id: "",
     class_id: "",
     background: "",
+    hero_image: null,
   });
 
   const handleInputChange = (event) => {
@@ -17,6 +19,22 @@ const CreateCharacterOverlay = ({ onClose }) => {
       ...prevInfo,
       [name]: value,
     }));
+  };
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+
+      reader.onloadend = () => {
+        setCharacterInfo((prevInfo) => ({
+          ...prevInfo,
+          hero_image: reader.result,
+        }));
+      };
+
+      reader.readAsDataURL(file);
+    }
   };
 
   const handleSubmit = async () => {
@@ -41,65 +59,156 @@ const CreateCharacterOverlay = ({ onClose }) => {
   return (
     <div className="overlay">
       <div className="overlay-content">
-        <div className="left-group">
+        <div className="header">
           <h2>Create Character</h2>
-          <input
-            type="text"
-            name="hero_name"
-            placeholder="Name"
-            value={characterInfo.hero_name}
-            onChange={handleInputChange}
-          />
-          <input
-            type="number"
-            name="hero_level"
-            placeholder="Level"
-            value={characterInfo.hero_level}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="race_id"
-            placeholder="Race"
-            value={characterInfo.race_id}
-            onChange={handleInputChange}
-          />
-          <input
-            type="text"
-            name="class_id"
-            placeholder="Class"
-            value={characterInfo.class_id}
-            onChange={handleInputChange}
-          />
-          <textarea
-            name="background"
-            placeholder="Background"
-            value={characterInfo.background}
-            onChange={handleInputChange}
-          />
-          <button className="submit-button" onClick={handleSubmit}>
-            Send it!
-          </button>
-        </div>
-        <div className="right-group">
-          <h3>STATS: </h3>
-          <div className="stats-box">
-            <p>Health Points: {/* Add your logic for Health Points here */}</p>
-            <p>Hit Chance: {/* Add your logic for Hit Chance here */}</p>
-            <p>Attack Damage: {/* Add your logic for Attack Damage here */}</p>
-            <p>Armor Class: {/* Add your logic for Armor Class here */}</p>
-            <p>
-              Initiative Bonus: {/* Add your logic for Initiative Bonus here */}
-            </p>
-          </div>
           <button
             className="close-button"
             onClick={onClose}
             style={{ alignSelf: "flex-end" }}
           >
-            Close
-          </button>
+            X
+          </button>{" "}
         </div>
+        <div className="edit-section">
+          <div className="card-container">
+            <div className="card-container-top">
+              <div className="image-container">
+                <img
+                  src={characterInfo.hero_image || defaultImage}
+                  alt="Uploaded Hero"
+                  width="200"
+                />
+                <input
+                  type="file"
+                  name="Image"
+                  accept="image/*"
+                  placeholder="Image"
+                  // value={characterInfo.hero_image}
+                  onChange={handleImageChange}
+                />
+              </div>
+
+              <div className="core-info">
+                <input
+                  type="text"
+                  name="hero_name"
+                  placeholder="Name"
+                  value={characterInfo.hero_name}
+                  onChange={handleInputChange}
+                />
+                <input
+                  type="number"
+                  name="hero_level"
+                  placeholder="Level"
+                  value={characterInfo.hero_level}
+                  onChange={handleInputChange}
+                />
+                <input
+                  type="number"
+                  name="xp"
+                  placeholder="XP"
+                  value={characterInfo.xp}
+                  onChange={handleInputChange}
+                />
+                <input
+                  type="text"
+                  name="race_id"
+                  placeholder="Race"
+                  value={characterInfo.race_id}
+                  onChange={handleInputChange}
+                />
+                <input
+                  type="text"
+                  name="class_id"
+                  placeholder="Class"
+                  value={characterInfo.class_id}
+                  onChange={handleInputChange}
+                />
+              </div>
+            </div>
+            <div className="primary-stats-container">
+              <div className="additional-stats">
+                <input
+                  type="number"
+                  name="Strength"
+                  value={characterInfo.STR}
+                  onChange={handleInputChange}
+                />{" "}
+                Proficiency
+              </div>
+              <div className="additional-stats">
+                <input
+                  type="number"
+                  name="Proficiency"
+                  placeholder="Proficiency"
+                  value={characterInfo.class_id}
+                  onChange={handleInputChange}
+                />{" "}
+                Proficiency
+              </div>
+              <div className="additional-stats">
+                <input
+                  type="number"
+                  name="Proficiency"
+                  placeholder="Proficiency"
+                  value={characterInfo.class_id}
+                  onChange={handleInputChange}
+                />{" "}
+                Proficiency
+              </div>
+              <div className="additional-stats">
+                <input
+                  type="number"
+                  name="Proficiency"
+                  placeholder="Proficiency"
+                  value={characterInfo.class_id}
+                  onChange={handleInputChange}
+                />{" "}
+                Proficiency
+              </div>
+              <div className="additional-stats">
+                <input
+                  type="number"
+                  name="Proficiency"
+                  placeholder="Proficiency"
+                  value={characterInfo.class_id}
+                  onChange={handleInputChange}
+                />{" "}
+                Proficiency
+              </div>
+              <div className="additional-stats">
+                <input
+                  type="number"
+                  name="Proficiency"
+                  placeholder="Proficiency"
+                  value={characterInfo.class_id}
+                  onChange={handleInputChange}
+                />{" "}
+                Proficiency
+              </div>
+              <div className="additional-stats">
+                <input
+                  type="number"
+                  name="Proficiency"
+                  placeholder="Proficiency"
+                  value={characterInfo.class_id}
+                  onChange={handleInputChange}
+                />{" "}
+                Proficiency
+              </div>
+            </div>
+
+            <textarea
+              name="background"
+              placeholder="Background"
+              value={characterInfo.background}
+              onChange={handleInputChange}
+            />
+          </div>
+        </div>
+        <button className="submit-button" onClick={handleSubmit}>
+          Send it!
+        </button>
       </div>
     </div>
   );

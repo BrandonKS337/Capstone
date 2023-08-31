@@ -65,6 +65,11 @@ Hero.init(
       allowNull: true,
       comment: "URL for character image",
     },
+    hero_image: {
+      type: DataTypes.BLOB,
+      allowNull: true,
+      comment: "This is for user uploads"
+    },
     weapon_ids: {
       type: DataTypes.INTEGER, // Use TEXT data type for potentially large content
       allowNull: true,

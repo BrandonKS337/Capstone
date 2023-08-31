@@ -12,29 +12,63 @@
   }
   
   .overlay-content {
-    width: 65%;
+    width: 40rem;
     height: 75%;
     background-color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: center; */
     margin-top: 10rem;
-    margin-bottom: 5rem;
-    
+    margin-bottom: 5rem; 
+    padding: .8rem;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .header button{
+    width: fit-content;
+    border-radius: 50px;
+    height: fit-content;
+  }
+  .edit-section {
+    height: 100%;
   }
   
-  .left-group {
-    width: 50%;
-    padding: 20px;
-  }
-  
-  .right-group {
-    width: 65%;
+  .card-container {
+    border: 1px solid green;
+    width: 100%;
+    height: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
   }
-  
+  .card-container-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .image-container {
+    border: 1px solid purple;
+    width: 50%;
+    max-height: 14rem;
+    align-items: center;
+  }
+  .image-container img{
+    width: 100%;
+    /* margin-bottom: 2px ; */
+    max-height: 90%;
+  }  
+  .core-info {
+    border: 1px solid orangered;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 45%;
+    /* gap: 6px; */
+    height: 14rem;
+    margin-bottom: 10px;
+  }  
   .stats-box {
     border: 1px solid #ccc;
     /* padding: 10px; */
@@ -46,11 +80,57 @@
     justify-content: space-between;
     align-items: start;
     padding-left: 10rem;
+  }
+  .primary-stats-container{
+    border: 2px solid pink;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5px;
+  }
+  .additional-stats {
+    width: 15%;
+    height: 4rem;
+    background: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  }
 
+  .additional-stats input {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .small-container{
+    height: 10px;
+    width: 10px;
+    border: 4px solid black;
   }
   
-  .stats-container {
+  
+  textarea {
     margin-top: 10px;
+    border: 1px solid gold;
+    height: 9rem;
+    padding: 1rem;
+    overflow: scroll;
+    overflow-x: hidden;
+    resize: none;
+  }
+  textarea::-webkit-scrollbar {
+    width: .5rem;
+  }
+  
+  textarea::-webkit-scrollbar-thumb {
+    background-color: goldenrod;
+    border-radius: 4px;
   }
   
   .close-button {
