@@ -138,6 +138,9 @@ To access all of the database schema please refer to the models folder located i
 
 ## Citations:
 
+Express server reference:
+```https://expressjs.com/en/api.html```
+
 character image resources
 
 one source
