@@ -30,8 +30,8 @@ const cors = require('cors')
 //trying to get node.js/express to push through image files.....
 // app.use(bodyParser.json({ limit: '100mb' }));
 // app.use(bodyParser.urlencoded({ limit: '100mb', extended: true }));
-app.use(express.json({ limit: 10000000000 }));
-app.use(express.urlencoded({ limit: 10000000000, extended: true }));
+app.use(express.json({ limit: 50000000 }));
+app.use(express.urlencoded({ limit: 50000000, extended: true }));
 
 app.use(cors()); //react boots on port 5173 so to tie this in to specifically my frontend use app.use(cors({ origin: 'http://localhost:5173' }));
 
