@@ -12,6 +12,7 @@ App uses a mixture of several dependencies and will require a few things install
 - node/nodemon
 - mySQL/MySQL workbench (or appropriate local database if you choose to mod the code a bit.)
 - bash or another tool like it to run your terminal commands from.
+- (extra) MIGHT possibly need to download a CORS unblock extension in your webBrowser if cors errors begin popping up.
 
 ## How to Clone:
 To clone to local files (using git bash)
