@@ -1,4 +1,6 @@
 const express = require("express");
+const bodyParser = require('body-parser')
+
 const app = express();
 require("dotenv").config();
 
@@ -20,11 +22,16 @@ const equipmentRoutes = require("./routes/equipmentRoutes");
 const cors = require('cors')
 
 //comment these lines out if creating a new db. These populate the table row data with premades
-const seedRunner = require("./seeds/seedsController")
-seedRunner.runAllSeeds()
+// const seedRunner = require("./seeds/seedsController")
+// seedRunner.runAllSeeds()
 
 app.use(express.json());
 app.use(cors()); //react boots on port 5173 so to tie this in to specifically my frontend use app.use(cors({ origin: 'http://localhost:5173' }));
+
+//trying to get node.js/express to push through image files.....
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));
+
 
 
 app.use("/api/users", userRoutes);

@@ -11,6 +11,22 @@ const CreateCharacterOverlay = ({ onClose }) => {
     class_id: "",
     background: "",
     hero_image: null,
+    xp: null,
+    STR: null,
+    DEX: null,
+    CON: null,
+    INT: null,
+    WIS: null,
+    CHA: null,
+    save_STR: null,
+    save_DEX: null,
+    save_CON: null,
+    save_INT: null,
+    save_WIS: null,
+    save_CHA: null,
+    passive_Perception: null,
+    passive_Investigation: null,
+    passive__Insight: null
   });
 
   const handleInputChange = (event) => {
@@ -39,6 +55,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
 
   const handleSubmit = async () => {
     try {
+      
       const response = await axios.post(
         "http://localhost:8000/api/heroes/create",
         characterInfo
@@ -130,7 +147,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Strength"
+                  name="STR"
                   value={characterInfo.STR}
                   onChange={handleInputChange}
                 />{" "}
@@ -139,7 +156,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Dexterity"
+                  name="DEX"
                   value={characterInfo.DEX}
                   onChange={handleInputChange}
                 />{" "}
@@ -148,7 +165,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Constitution"
+                  name="CON"
                   value={characterInfo.CON}
                   onChange={handleInputChange}
                 />{" "}
@@ -157,7 +174,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Intelligence"
+                  name="INT"
                   value={characterInfo.INT}
                   onChange={handleInputChange}
                 />{" "}
@@ -166,7 +183,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Wisdom"
+                  name="WIS"
                   value={characterInfo.WIS}
                   onChange={handleInputChange}
                 />{" "}
@@ -175,7 +192,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Charisma"
+                  name="CHA"
                   value={characterInfo.CHA}
                   onChange={handleInputChange}
                 />{" "}
@@ -186,7 +203,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Strength"
+                  name="save_STR"
                   value={characterInfo.save_STR}
                   onChange={handleInputChange}
                 />{" "}
@@ -195,7 +212,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Dexterity"
+                  name="save_DEX"
                   value={characterInfo.save_DEX}
                   onChange={handleInputChange}
                 />{" "}
@@ -204,7 +221,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Constitution"
+                  name="save_CON"
                   value={characterInfo.save_CON}
                   onChange={handleInputChange}
                 />{" "}
@@ -213,7 +230,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Intelligence"
+                  name="save_INT"
                   value={characterInfo.save_INT}
                   onChange={handleInputChange}
                 />{" "}
@@ -222,7 +239,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Wisdom"
+                  name="save_WIS"
                   value={characterInfo.save_WIS}
                   onChange={handleInputChange}
                 />{" "}
@@ -231,7 +248,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Charisma"
+                  name="save_CHA"
                   value={characterInfo.save_CHA}
                   onChange={handleInputChange}
                 />{" "}
@@ -242,7 +259,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
               <div className="passive-stats">
                 <input
                   type="number"
-                  name="Passive Perception"
+                  name="passive_Perception"
                   value={characterInfo.passive_Perception}
                   onChange={handleInputChange}
                 />{" "}
@@ -251,20 +268,20 @@ const CreateCharacterOverlay = ({ onClose }) => {
               <div className="passive-stats">
                 <input
                   type="number"
-                  name="Passive Perception"
-                  value={characterInfo.passive_Perception}
+                  name="passive_Investigation"
+                  value={characterInfo.passive_Investigation}
                   onChange={handleInputChange}
                 />{" "}
-                <p>Passive WIS (Perception)</p>
+                <p>Passive INT (Investigation)</p>
               </div>
               <div className="passive-stats">
                 <input
                   type="number"
-                  name="Passive Perception"
-                  value={characterInfo.passive_Perception}
+                  name="passive_Insight"
+                  value={characterInfo.passive__Insight}
                   onChange={handleInputChange}
                 />{" "}
-                <p>Passive WIS (Perception)</p>
+                <p>Passive WIS (Insight)</p>
               </div>
             </div>
 
