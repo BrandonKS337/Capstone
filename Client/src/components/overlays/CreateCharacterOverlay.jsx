@@ -134,67 +134,137 @@ const CreateCharacterOverlay = ({ onClose }) => {
                   value={characterInfo.STR}
                   onChange={handleInputChange}
                 />{" "}
-                Proficiency
+                <p>STRENGTH</p>
               </div>
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Proficiency"
-                  placeholder="Proficiency"
-                  value={characterInfo.class_id}
+                  name="Dexterity"
+                  value={characterInfo.DEX}
                   onChange={handleInputChange}
                 />{" "}
-                Proficiency
+                <p>DEXTERITY</p>
               </div>
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Proficiency"
-                  placeholder="Proficiency"
-                  value={characterInfo.class_id}
+                  name="Constitution"
+                  value={characterInfo.CON}
                   onChange={handleInputChange}
                 />{" "}
-                Proficiency
+                <p>CONSTITUTION</p>
               </div>
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Proficiency"
-                  placeholder="Proficiency"
-                  value={characterInfo.class_id}
+                  name="Intelligence"
+                  value={characterInfo.INT}
                   onChange={handleInputChange}
                 />{" "}
-                Proficiency
+                <p>INTELLIGENCE</p>
               </div>
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Proficiency"
-                  placeholder="Proficiency"
-                  value={characterInfo.class_id}
+                  name="Wisdom"
+                  value={characterInfo.WIS}
                   onChange={handleInputChange}
                 />{" "}
-                Proficiency
+                <p>WISDOM</p>
               </div>
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Proficiency"
-                  placeholder="Proficiency"
-                  value={characterInfo.class_id}
+                  name="Charisma"
+                  value={characterInfo.CHA}
                   onChange={handleInputChange}
                 />{" "}
-                Proficiency
+                <p>CHARISMA</p>
+              </div>
+            </div>
+            <div className="saves-container">
+              <div className="additional-stats">
+                <input
+                  type="number"
+                  name="Strength"
+                  value={characterInfo.save_STR}
+                  onChange={handleInputChange}
+                />{" "}
+                <p>Strength Save</p>
               </div>
               <div className="additional-stats">
                 <input
                   type="number"
-                  name="Proficiency"
-                  placeholder="Proficiency"
-                  value={characterInfo.class_id}
+                  name="Dexterity"
+                  value={characterInfo.save_DEX}
                   onChange={handleInputChange}
                 />{" "}
-                Proficiency
+                <p>Dexterity Save</p>
+              </div>
+              <div className="additional-stats">
+                <input
+                  type="number"
+                  name="Constitution"
+                  value={characterInfo.save_CON}
+                  onChange={handleInputChange}
+                />{" "}
+                <p>Constitution Save</p>
+              </div>
+              <div className="additional-stats">
+                <input
+                  type="number"
+                  name="Intelligence"
+                  value={characterInfo.save_INT}
+                  onChange={handleInputChange}
+                />{" "}
+                <p>Intelligence Save</p>
+              </div>
+              <div className="additional-stats">
+                <input
+                  type="number"
+                  name="Wisdom"
+                  value={characterInfo.save_WIS}
+                  onChange={handleInputChange}
+                />{" "}
+                <p>WISDOM</p>
+              </div>
+              <div className="additional-stats">
+                <input
+                  type="number"
+                  name="Charisma"
+                  value={characterInfo.save_CHA}
+                  onChange={handleInputChange}
+                />{" "}
+                <p>Charisma Save</p>
+              </div>
+            </div>
+            <div className="passives-container">
+              <div className="passive-stats">
+                <input
+                  type="number"
+                  name="Passive Perception"
+                  value={characterInfo.passive_Perception}
+                  onChange={handleInputChange}
+                />{" "}
+                <p>Passive WIS (Perception)</p>
+              </div>
+              <div className="passive-stats">
+                <input
+                  type="number"
+                  name="Passive Perception"
+                  value={characterInfo.passive_Perception}
+                  onChange={handleInputChange}
+                />{" "}
+                <p>Passive WIS (Perception)</p>
+              </div>
+              <div className="passive-stats">
+                <input
+                  type="number"
+                  name="Passive Perception"
+                  value={characterInfo.passive_Perception}
+                  onChange={handleInputChange}
+                />{" "}
+                <p>Passive WIS (Perception)</p>
               </div>
             </div>
 
