@@ -66,7 +66,7 @@ Hero.init(
       comment: "URL for character image",
     },
     hero_image: {
-      type: DataTypes.BLOB,
+      type: DataTypes.TEXT('long'),
       allowNull: true,
       comment: "This is for user uploads"
     },

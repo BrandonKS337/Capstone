@@ -150,7 +150,11 @@ export const Characters = () => {
               <div className="card-inner">
                 <div
                   className="card-front"
-                  style={{ backgroundImage: `url(${character.image_url})` }}
+                  style={{
+                    backgroundImage: character.image_url
+                      ? `url(${character.image_url})`
+                      : `url(${character.hero_image})`,
+                  }}
                 >
                   <h3>{character.hero_name}</h3>
                 </div>
@@ -244,7 +248,7 @@ export const Characters = () => {
                     </p>
                   </div>
                   <div className="quick-stats-container">
-                  <div className="quick-stats">
+                    <div className="quick-stats">
                       <p>
                         {isCurrentCardEditing ? (
                           <input
