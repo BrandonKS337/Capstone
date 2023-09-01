@@ -8,7 +8,7 @@ To start Fantasy Nexus is a pet project that I am working on primarily for the I
 
 
 ## Required Software:
-App uses a mixture of several dependencies and will require a few things installed before hand
+App uses a mixture of several dependencies and will require a few things installed before hand to run it the same way I do.
 - node/nodemon
 - mySQL/MySQL workbench (or appropriate local database if you choose to mod the code a bit.)
 - bash or another tool like it to run your terminal commands from.
@@ -19,7 +19,7 @@ To clone to local files (using git bash)
 - enter into your terminal and navigate to your install location of choice
 - type in git clone https://github.com/BrandonKS337/Capstone.git 
 - Once files have pulled into your local directory you should see the following folder structure
-    ``` Client folder </br> Server folder</> resources.md ```
+    ` Client folder </br> Server folder</> resources.md `
 - These 3 are your main directories and you will need to branch into both Client and servers separately to install/run app
 
 ## Setting Up:
@@ -70,11 +70,10 @@ For clarification when you run the dependencies you should see the following.
 ## Running the App:
 As mentioned in order to run the app you will need both files launched so open up two seperate terminals and navigate into both the server and client folders at the same time. To start each up run the following:
  - Client:
-
-``` npm run dev ```
+    ``` npm run dev ```
 
  - Server:
- ```npm run server```
+    ```npm run server```
 
  The client will kick the react app into gear and allow you to access the app frontend via the IP you set up in your env file. Most likely if left simple you will have set it up so that the local stuff works so you can navigate to http://localhost:5173 to pull it up. If using something like VSCode and gitbash just control left click the local host http address that pops up and it will auto run the internet browser you have set default pulling the page up for you.
 
