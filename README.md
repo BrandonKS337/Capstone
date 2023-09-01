@@ -43,8 +43,9 @@ DB_PORT =3306
 
 For clarification when you run the dependencies you should see the following.
 -Client Side:
-    ```
-    "@types/react": "^18.0.37",
+    
+
+        "@types/react": "^18.0.37",
         "@types/react-dom": "^18.0.11",
         "@vitejs/plugin-react": "^4.0.0",
         "eslint": "^8.38.0",
@@ -52,16 +53,18 @@ For clarification when you run the dependencies you should see the following.
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-react-refresh": "^0.3.4",
         "vite": "^4.3.9",
-    ```
+
+
+    
 -Server Side:
-    ```
+    
         "bcrypt": "^5.1.1",
         "cors": "^2.8.5",
         "dotenv": "^16.3.1",
         "express": "^4.18.2",
         "mysql2": "^3.4.5",
         "sequelize": "^6.32.1"
-    ```
+    
 
 
 ## Running the App:
