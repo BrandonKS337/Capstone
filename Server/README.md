@@ -1,23 +1,3 @@
-Exercise 3
-
-Try creating an express application for a blog website using Sequelize. You can refer to Module 8 for the logical/physical models
-
-Requirements
-- Your system should have a proper MVC structure
-- The system should be able to create users
-- The users should be able to create multiple posts (posts should be very basic, title/desc/img)
-- other users should be able to like the posts and comment on them
-
-copy and pasted this code into previous exercise to just update both files for sequelize requirement.
-
-
-
-Video reference: Wed July 5 Recording 2
-reference 26 min in for dbConnect and npm run server @32 min
-*** IMPORTANT. SWAPPING FROM mongodb TO MYsql FOR THIS ***
-
-
-COPIED from exercise 2
 postman checks
 User - GET users
 http://localhost:8000/api/users
@@ -84,23 +64,23 @@ Comments - POST method
 
 ////////////////////////// AUTH STUFF //////////////////////////
 AUTH - login route
-localhost:8080/api/auth/login
+`localhost:8080/api/auth/login`
 
 
 Auth - Signup 
-localhost:8080/api/auth/signup
+`localhost:8080/api/auth/signup`
 
 
 /////////////////////// HEROES STUFF /////////////////////
 
 *** GET Heroes ***
-http://localhost:8000/api/heroes
+`http://localhost:8000/api/heroes`
 
 *** GET Hero by ID ***
-http://localhost:8000/api/heroes/<ID#>
+`http://localhost:8000/api/heroes/<ID#>`
 
 *** CREATE HEROES***
-http://localhost:8000/api/heroes/create
+`http://localhost:8000/api/heroes/create`
 {
 "title": "Im the same post new title",
 "first_name": "Second post",
