@@ -141,8 +141,29 @@ To access all of the database schema please refer to the models folder located i
 
 ## Citations:
 
-Express server reference:
-```https://expressjs.com/en/api.html```
+Express.js reference documents:
+`https://expressjs.com/`
+
+Express server reference documents:
+`https://expressjs.com/en/api.html`
+
+Node.js documents:
+`https://nodejs.org/en`
+
+MySQL database information:
+`https://www.mysql.com/`
+
+Future Use D&D 5e API:
+`https://www.dnd5eapi.co/`
+
+Postman (CRUD testing) resources:
+`https://www.postman.com/`
+
+React Information: 
+`https://react.dev/`
+
+
+
 
 character image resources
 
@@ -173,3 +194,11 @@ Seraph Ligbearer:
 ``https://i.etsystatic.com/43204365/r/il/a2ca06/4989636283/il_fullxfull.4989636283_mary.jpg``
 Glimwich sparkspinner
 ``https://i.pinimg.com/originals/f7/71/a0/f771a020b772dbb6c4db5fda3c35a9d5.png``
+
+Most of the D&D images are under Ownership of Wizards of the coast. I do not own rights to a majority of those images
+The link to their site is thus:
+`https://company.wizards.com/en`
+
+They are also in affiliation with D&D Beyond which was one source of inspiration for the base necessary requirements for some of the design thoughts
+Here is their link as well in case some of the imagery falls in line with their property rights as well:
+`https://www.dndbeyond.com/`
