@@ -11,22 +11,22 @@ const CreateCharacterOverlay = ({ onClose }) => {
     class_id: "",
     background: "",
     hero_image: "",
-    xp: 0,
-    STR: 0,
-    DEX: 0,
-    CON: 0,
-    INT: 0,
-    WIS: 0,
-    CHA: 0,
-    save_STR: 0,
-    save_DEX: 0,
-    save_CON: 0,
-    save_INT: 0,
-    save_WIS: 0,
-    save_CHA: 0,
-    passive_Perception: 0,
-    passive_Investigation: 0,
-    passive__Insight: 0,
+    xp: "null",
+    STR: "null",
+    DEX: "null",
+    CON: "null",
+    INT: "null",
+    WIS: "null",
+    CHA: "null",
+    save_STR: "null",
+    save_DEX: "null",
+    save_CON: "null",
+    save_INT: "null",
+    save_WIS: "null",
+    save_CHA: "null",
+    passive_Perception: "null",
+    passive_Investigation: "null",
+    passive__Insight: "null",
   });
 
   const handleInputChange = (event) => {
@@ -37,18 +37,17 @@ const CreateCharacterOverlay = ({ onClose }) => {
     }));
   };
 
-  const handleImageChange = (event) => { //this is reading any image file and converts to Base64 so that database can take the file in as TEXT or LONGTEXT to store it
+  const handleImageChange = (event) => {
+    //this is reading any image file and converts to Base64 so that database can take the file in as TEXT or LONGTEXT to store it
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
       // console.log(reader.result.substring(0,30))
 
-
       reader.onloadend = () => {
         setCharacterInfo((prevInfo) => ({
           ...prevInfo,
           hero_image: reader.result,
-          
         }));
       };
 
@@ -58,7 +57,6 @@ const CreateCharacterOverlay = ({ onClose }) => {
 
   const handleSubmit = async () => {
     try {
-      
       const response = await axios.post(
         "http://localhost:8000/api/heroes/create",
         characterInfo
@@ -93,6 +91,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
           <div className="card-container">
             <div className="card-container-top">
               <div className="image-container">
+                <h4>Character Image</h4>
                 <img
                   src={characterInfo.hero_image || defaultImage}
                   alt="Uploaded Hero"
@@ -266,7 +265,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
                   value={characterInfo.passive_Perception}
                   onChange={handleInputChange}
                 />{" "}
-                <p>Passive WIS (Perception)</p>
+                Passive WIS (Perception)
               </div>
               <div className="passive-stats">
                 <input
@@ -275,7 +274,7 @@ const CreateCharacterOverlay = ({ onClose }) => {
                   value={characterInfo.passive_Investigation}
                   onChange={handleInputChange}
                 />{" "}
-                <p>Passive INT (Investigation)</p>
+                Passive INT (Investigation)
               </div>
               <div className="passive-stats">
                 <input
@@ -284,16 +283,17 @@ const CreateCharacterOverlay = ({ onClose }) => {
                   value={characterInfo.passive__Insight}
                   onChange={handleInputChange}
                 />{" "}
-                <p>Passive WIS (Insight)</p>
+                Passive WIS (Insight)
               </div>
             </div>
-
-            <textarea
-              name="background"
-              placeholder="Background"
-              value={characterInfo.background}
-              onChange={handleInputChange}
-            />
+            <div className="background-container">
+              <textarea
+                name="background"
+                placeholder="Background"
+                value={characterInfo.background}
+                onChange={handleInputChange}
+              />
+            </div>
           </div>
         </div>
         <button className="submit-button" onClick={handleSubmit}>
