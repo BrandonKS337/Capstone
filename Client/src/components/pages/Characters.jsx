@@ -605,16 +605,16 @@ export const Characters = () => {
                       <p>
                         {isCurrentCardEditing ? (
                           <input
-                            value={editedCharacter.passive_Perception || ""}
+                            value={editedCharacter.passive_Insight || ""}
                             onChange={(e) =>
                               setEditedCharacter((prevState) => ({
                                 ...prevState,
-                                passive_Perception: e.target.value,
+                                passive_Insight: e.target.value,
                               }))
                             }
                           />
                         ) : (
-                          character.passive_Perception
+                          character.passive_Insight
                         )}
                       </p>
                       <div className="pasv-name">Passive WIS (INSIGHT):</div>

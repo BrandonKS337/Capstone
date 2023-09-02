@@ -21,6 +21,10 @@ router.put("/updatepassword/:id", (req, res) => {  //sets route using PUT method
   Controllers.auth.updatePassword(userId, newPassword, res); //calls updatePassword function from authController passing in the new variables and response object
 });
 
+router.post("/logout", (req, res) => {
+  Controllers.auth.logout(req, res)
+})
+
 
 
 module.exports = router;

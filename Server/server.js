@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require('body-parser')
+const session = require('express-session')
 
 const app = express();
 require("dotenv").config();
@@ -21,6 +22,8 @@ const classRoutes = require("./routes/classRoutes");
 const equipmentRoutes = require("./routes/equipmentRoutes");
 const cors = require('cors')
 
+
+
 //comment these lines out if creating a new db. These populate the table row data with premades
 // const seedRunner = require("./seeds/seedsController")
 // seedRunner.runAllSeeds()
@@ -35,7 +38,12 @@ app.use(express.urlencoded({ limit: 50000000, extended: true }));
 
 app.use(cors()); //react boots on port 5173 so to tie this in to specifically my frontend use app.use(cors({ origin: 'http://localhost:5173' }));
 
-
+app.use(session({ 
+  secret:'pizzahut', //used for signing the session ID 
+  resave: false,
+  saveUninitialized,
+  cookie: { secure: false }
+}))
 
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
@@ -53,7 +61,14 @@ app.use("/api/weapons", weaponRoutes);
 app.use("/api/classes", classRoutes);
 
 
-
+function isAuthenticated(req, res, next) {
+  if (req.session.userId) {
+    next() 
+  }else {
+    res.status(401).send('Unauthorized')
+  }
+}
+app.use('/api/protected', isAuthenticated)
 
 // test route to verify app running. Commented out as it's not necessary but good to keep around
 // app.get("/", (req, res) => {

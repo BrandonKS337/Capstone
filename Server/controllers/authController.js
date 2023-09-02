@@ -80,6 +80,9 @@ const loginUserByUsername = (req, res) => {
         bcrypt.compareSync(unhashedPassword, data[0].dataValues.password)
       ) {
         data[0].dataValues.password = undefined;
+
+        req.session.userId = data[0].dataValues.id
+
         res
           .status(200)
           .send({ success: true, message: "Boom All logged in and good to go", data: data });
@@ -127,9 +130,30 @@ const loginUserByEmail = (req, res) => {
     });
 };
 
+const logout = (req, res) => {
+  // Check if the user is logged in
+  if (req.session.userId) {
+    // Destroy the session data
+    req.session.destroy(err => {
+      if (err) {
+        console.log("Error:", err);
+        return res.status(500).send({ success: false, message: "Error during logout" });
+      }
+      // Clear the cookie that stores session info
+      res.clearCookie('sid');
+      return res.status(200).send({ success: true, message: "Logged out successfully" });
+    });
+  } else {
+    //this will alert if no session active
+    return res.status(400).send({ success: false, message: "User is not logged in" });
+  }
+};
+
+
 module.exports = {
   signUpUser,
   loginUserByEmail,
   updatePassword,
-  loginUserByUsername
+  loginUserByUsername,
+  logout
 };

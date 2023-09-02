@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../styles/Login.css"; // Path to your styles folder
 import { useNavigate } from "react-router-dom";
-import SignupPage from "../overlays/SignupPage";
+import SignupPage from "../overlays/SignupPage"
 
 export const Login = () => {
   //set up use state effects for taking userName/password/remember so that the data can be transferred
@@ -11,12 +11,13 @@ export const Login = () => {
   const [password, setPassword] = useState(""); //holds the password input
   const [rememberMe, setRememberMe] = useState(false); //holds the remember me state//not used just yet
   const [errorMessage, setErrorMessage] = useState(""); //just setting this to help with displaying any error messages
-  const [showOverlay, setShowOverlay] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(false)
   const navigate = useNavigate(); // setting this so that can push a user from root to dashboard on successfully verified login attempts automatically
 
   const toggleOverlay = () => {
-    setShowOverlay(!showOverlay);
-  };
+    setShowOverlay(!showOverlay)
+  }
+
 
   const handleLogin = async () => {
     try {
@@ -26,11 +27,14 @@ export const Login = () => {
         {
           username: username,
           password: password,
+        }, {
+          withCredentials: true
         }
       );
 
       if (response.data.success) {
         console.log("Successfully logged in: ", response.data.data);
+        sessionStorage.setItem('token', response.data.token)
 
         //this should navigate user on login success to dashboard or if changed whatever target route endpoint entered.
         navigate("/Home");
@@ -105,24 +109,26 @@ export const Login = () => {
                     {/* <span className="hyperlink">Create new</span> */}
                     <button onClick={toggleOverlay}> Create Account</button>
                   </p>
-                  {showOverlay && <SignupPage onClose={toggleOverlay} />}
+                  {showOverlay && <SignupPage onClose={toggleOverlay}/>}
 
                   <div className="altLogins">
-                    <img
-                      className="google-login"
-                      alt="Google login"
-                      src="./src/components/assets/altloginbuttons/Google Login.svg"
-                    />
-                    <img
-                      className="facebook-login"
-                      alt="Facebook login"
-                      src="./src/components/assets/altloginbuttons/Facebook Login.svg"
-                    />
-                    <img
-                      className="apple-login"
-                      alt="Apple login"
-                      src="./src/components/assets/altloginbuttons/Apple Login.svg"
-                    />
+                    
+                      <img
+                        className="google-login"
+                        alt="Google login"
+                        src="./src/components/assets/altloginbuttons/Google Login.svg"
+                      />
+                      <img
+                        className="facebook-login"
+                        alt="Facebook login"
+                        src="./src/components/assets/altloginbuttons/Facebook Login.svg"
+                      />
+                      <img
+                        className="apple-login"
+                        alt="Apple login"
+                        src="./src/components/assets/altloginbuttons/Apple Login.svg"
+                      />
+                    
                   </div>
                 </div>
               </div>
