@@ -26,11 +26,11 @@ export const Navbar = () => {
             <NavLink to="/Library">Library</NavLink>
           </li>
           <li>
-            <NavLink to="/BattlePit">The Battle Pitt</NavLink>
+            <NavLink to="/BattlePit">The Battle Pit</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/AdventurersDen">Adventurers' Den</NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink to= "/Profile"> Profile </NavLink>
           </li>

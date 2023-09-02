@@ -127,3 +127,17 @@ p {
   background: white;
   border-radius: 10px;
 }
+.results-container {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  border: 2px solid red;
+  padding: 1.8rem 0 0 3rem;
+}
+
+.results-container img {
+  max-width: 100%; 
+  max-height: 100%;
+  display: block;
+}
+

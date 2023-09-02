@@ -105,7 +105,10 @@ export const Library = () => {
         </div>
         <div className="bottomRight">
           {/* include the whit background and this is where the data will all display */}
-          <div className="results-container"></div>
+          <div className="results-container">
+            {" "}
+            <img src="./src/components/assets/LibraryMaterials/library screenshot.jpg" />
+          </div>
         </div>
       </div>
     </div>

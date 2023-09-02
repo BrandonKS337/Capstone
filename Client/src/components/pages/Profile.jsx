@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/ProfilePage.css"
 
 function Profile() {
   // Initialize state for each input field
@@ -44,7 +45,7 @@ function Profile() {
 
   return (
     <div className="profile-container">
-      <h1>Profile Page</h1>
+      {/* <h1>Profile Page</h1>
 
       <div className="profile-info">
         <input
@@ -80,7 +81,8 @@ function Profile() {
       </div>
 
       <button onClick={handleUpdateProfile}>Update Profile</button>
-      <button>Delete Profile</button>
+      <button>Delete Profile</button> */}
+      <img src="./src/components/assets/profileImages/profile page.jpg" />
     </div>
   );
 }
