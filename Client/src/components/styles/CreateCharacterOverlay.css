@@ -12,6 +12,9 @@
 }
 h2 {
   color: white;
+  /* font-size: xx-large; */
+}
+.header h2 {
   font-size: xx-large;
 }
 

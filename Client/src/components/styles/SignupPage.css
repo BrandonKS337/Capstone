@@ -187,7 +187,7 @@
 }
 
 .error-message {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   text-align: center;
   width: 80%;
 }
@@ -206,11 +206,11 @@
   top: 9px;
 }
 
-.alt-buttons {
+.create-account .alt-buttons {
   display: flex;
   justify-content: space-evenly;
   width: 95%;
-  margin-top: 1rem;
+  margin-top: 4.5rem;
   /* border: 2px solid orangered; */
 
 }
